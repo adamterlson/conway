@@ -60,13 +60,12 @@ completion = client.chat.completions.create(
     {"role": "user", "content": """
         My team's goal is to build a new InterNations mobile app. Our team members are cross-functional including product, engineering and desisgn. Our values include 'Artifacts are king', 'Make it work, make it right, make it fast.' and 'Security first, defence in depth.' 
         My team has two squads, one for frontend development and one for the backend. We also have a dedicated QA team.
-        Code repository: https://github.com/internations.
      """}
   ]
 )
 
 content = json.dumps(json.loads(completion.choices[0].message.content), indent=2)
-base_string = "Sample"
+base_string = "Sample_Output"
 current_date = datetime.now()
 formatted_datetime = current_date.strftime("%Y%m%d_%H%M%S")
 filename = f"{base_string}_{formatted_datetime}.json"

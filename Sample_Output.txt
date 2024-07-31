@@ -1,0 +1,68 @@
+Prompt:
+"You do not want to build with React Native anymore, the technology is a dead-end. Switch to using native iOS and Android technologies like ObjC and Java."
+
+{
+  "ImpactSummaryScore": 7,
+  "Challenges": {
+    "Transition Complexity": "Switching from React Native to native iOS/Android development introduces a steep learning curve for team members accustomed to JavaScript and React patterns. This shift may lead to a temporary decline in productivity.",
+    "Resource Allocation": "The project may face resource allocation challenges as developers need to be trained on Swift/ObjC and Java, which could increase costs and time spent on development.",
+    "Potential Delays": "The development timeline may be extended due to the need for retraining and rewriting existing code, which can adversely affect the overall project delivery."
+  },
+  "Advantages": {
+    "Performance Improvements": "Native development allows for better performance optimization tailored to each platform, leading to enhanced user experience and app responsiveness.",
+    "Future-Proofing": "Using native technologies avoids the risks posed by relying on a potentially outdated framework like React Native, ensuring the app is built on stable and well-supported platforms.",
+    "Access to Native Features": "Native development facilitates access to platform-specific features and APIs, allowing for richer functionality and overall enriched user interactions."
+  },
+  "ChangeImpactAreas": {
+    "RequirementsDocumentation": {
+      "Impact": "User stories and use cases will need to be revised to accommodate the differences in functionality and capabilities of native technologies."
+    },
+    "DesignDocuments": {
+      "Impact": "Technical specifications will have to be updated to reflect new architectural designs and integration approaches tailored for native development."
+    },
+    "ProjectPlan": {
+      "Impact": "The timeline must be re-evaluated to allow for the learning curve, training periods, and extended development phases for rewriting the application."
+    },
+    "ContinuousImprovementReports": {
+      "Impact": "Action items and feedback mechanisms will need to be reconsidered to support the new development environment and methodologies."
+    },
+    "CodeRepositories": {
+      "Impact": "New repositories may need to be set up for native codebases, requiring a migration of existing code and documentation."
+    },
+    "TestPlans_TestCases": {
+      "Impact": "Test strategies will need to be adapted and expanded to cover the unique aspects of native development, requiring new test cases for platform-specific functionality."
+    }
+  }
+}
+
+---
+
+Prompt: "You are getting a new member on the team. They are a junior developer and will require a lot of assistance getting started in the codebase so they deliver features."
+
+{
+  "ImpactSummaryScore": 6,
+  "Challenges": [
+    "The integration of a junior developer in the existing team may slow down development temporarily as current team members will need to allocate time for onboarding and mentorship.",
+    "The junior developer might face a steep learning curve familiarizing themselves with the project's technology stack and coding standards, potentially impacting overall productivity.",
+    "Effective knowledge transfer and support will require adjustments in meeting cadences and the communication plan, which may disrupt established workflows."
+  ],
+  "Advantages": [
+    "Bringing in a junior developer aligns with the team's core values by fostering a culture of learning and collaboration, allowing for a fresh perspective on projects.",
+    "The junior developer can help with maintaining momentum in feature delivery as they become productive, ultimately helping the team meet their objectives of delivering a seamless user experience.",
+    "This change supports the team's mission of enhancing expat communication by increasing available resources, thus allowing more features and improvements to be developed as the junior developer grows."
+  ],
+  "ChangeImpactAreas": {
+    "MeetingCadences": {
+      "Description": "Expect to increase one-on-one meetings and mentorship sessions to support the junior developer's onboarding process, impacting the time currently allocated for regular team check-ins."
+    },
+    "CommunicationPlan": {
+      "Description": "The communication plan may need to adapt to include more direct support channels for the junior developer, ensuring they can ask questions and get guidance as needed."
+    },
+    "CodeRepositories": {
+      "Description": "The junior developer's contributions will necessitate proper review processes in place to maintain code quality, potentially complicating existing development workflows initially."
+    },
+    "ContinuousImprovementReports": {
+      "Description": "Action items may shift to include focused improvement on onboarding processes and knowledge sharing practices to facilitate junior developer integration effectively."
+    }
+  }
+}
