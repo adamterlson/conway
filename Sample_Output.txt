@@ -66,3 +66,28 @@ Prompt: "You are getting a new member on the team. They are a junior developer a
     }
   }
 }
+
+---
+
+For this one I switched up the formatting of the output.
+Prompt: 
+"You will use Slack for your internal team communication."
+
+{
+  "New Team API": { Cut to make room },
+  "Change Complexity Score": "low",
+  "Challenges": [
+    "No significant complexity as Slack is already implemented; however, team members may need to adapt to Slack's integrated features and optimize their usage.",
+    "Potential resistance from team members who prefer other communication tools or methods."
+  ],
+  "Advantages": [
+    "Facilitates instant communication and faster decision-making processes.",
+    "Enhances collaboration through dedicated channels for various aspects of the project.",
+    "Leverages existing organizational culture around using tech platforms to support team dynamics."
+  ],
+  "Change Impact Areas": {
+    "CommunicationPlan": {
+      "Summary": "The communication plan now explicitly incorporates Slack as a primary tool for instant communication, enhancing the team's ability to connect in real-time."
+    }
+  }
+}
