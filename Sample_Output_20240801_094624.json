@@ -1,0 +1,98 @@
+{
+  "TeamAPI": {
+    "Topology": "Stream-aligned",
+    "MissionCharter": {
+      "NorthStar": "Deliver a seamless mobile self-checkout experience for tech-savvy customers.",
+      "Mission": "To provide Best Buy customers with a frictionless and efficient shopping experience through mobile technology.",
+      "Objectives": [
+        "Develop and launch a mobile self-checkout application.",
+        "Enhance user experience by minimizing transaction time.",
+        "Ensure security and privacy in payment processing."
+      ],
+      "Scope": "The project includes mobile app development, user experience design, and backend integration with payment systems.",
+      "Stakeholders": [
+        "Product Management",
+        "Engineering",
+        "Design",
+        "Best Buy Customers"
+      ],
+      "HighLevelPlans": "Iterative development with regular user feedback sessions to enhance features and usability."
+    },
+    "ValuesStatements": [
+      "Artifacts are king.",
+      "Make it work, make it right, make it fast.",
+      "Security first, defense in depth."
+    ],
+    "KPIsandMetrics": {
+      "HealthCheck": "Green",
+      "QualitativeFeedback": {
+        "Insight": "Feedback indicates customers appreciate the quick and intuitive nature of the self-checkout process."
+      },
+      "QuantitativeFeedback": {
+        "Target": "Achieve 95% user satisfaction rating.",
+        "Current": "Currently at 90% user satisfaction."
+      }
+    },
+    "RequirementsDocumentation": "User stories detailing features needed for the mobile self-checkout experience.",
+    "DesignDocuments": "Wireframes and interactive prototypes of the mobile self-checkout interface.",
+    "ProjectPlan": "Milestones include user testing, initial launch, and iteration phases over the next six months.",
+    "MeetingCadences": "Weekly stand-ups to discuss progress, issues, and next steps.",
+    "CommunicationPlan": {
+      "Tools": [
+        "Slack",
+        "Microsoft Teams"
+      ],
+      "Frequency": "Daily updates through Slack; weekly sync-ups on Teams.",
+      "Channels": [
+        "Real-time chat for urgent issues",
+        "Video calls for planning"
+      ]
+    },
+    "CodeRepositories": "GitHub repository for version control and collaboration.",
+    "TestPlansandTestCases": "Testing scenarios covering user interactions, error handling, and security checks.",
+    "DeploymentProcesses": "Configuration scripts and CI/CD pipelines for automated deployment.",
+    "UserDocumentation": "https://bestbuy.com/mobile-self-checkout-guide",
+    "TechnicalDocumentation": "https://bestbuy.com/api-docs/self-checkout",
+    "ContinuousImprovementReports": {
+      "ActionItems": "Enhance the mobile checkout flow based on user feedback.",
+      "Feedback": {
+        "DateCreated": "2023-10-01",
+        "Stop": "Stop using jargon that confuses users during customer testing.",
+        "Start": "Start conducting more frequent user testing sessions.",
+        "Continue": "Continue to prioritize security in all development phases."
+      }
+    },
+    "RolesandResponsibilities": [
+      {
+        "Role": "Product Manager",
+        "Responsibility": "Oversee project vision and customer needs."
+      },
+      {
+        "Role": "UX Designer",
+        "Responsibility": "Design intuitive user interface."
+      },
+      {
+        "Role": "Software Engineer",
+        "Responsibility": "Develop and maintain the application."
+      }
+    ],
+    "RiskManagement": {
+      "PotentialRisks": [
+        {
+          "Risk": "Technical challenges with payment processing integration.",
+          "Mitigation": "Engage experts early in the project."
+        }
+      ],
+      "ContingencyActions": "Have backup payment solutions prepared."
+    },
+    "FeedbackMechanisms": "User feedback surveys post-launch, as well as regular check-ins.",
+    "StakeholderEngagement": {
+      "EngagementStrategy": "Frequent updates and feedback loops with product owners and key customer representatives.",
+      "StakeholderDistance": {
+        "ProductOwners": "Nearest",
+        "BestBuyCustomers": "Near",
+        "AzurePlatformTeam": "Far"
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+    "NewTeamAPI": {
+        "MissionCharter": {
+            "NorthStar": "To create a user-friendly mobile application for InterNations that enhances communication and connection among global expats while providing a private and secure user experience.",
+            "Objectives": [
+                "Deliver a seamless and engaging user experience.",
+                "Ensure robust security measures throughout the application.",
+                "Facilitate communication and networking for users but limit shared user-generated content."
+            ],
+            "Scope": "The project's scope includes frontend development, backend integration, and comprehensive quality assurance with a focus on user privacy.",
+            "Stakeholders": [
+                "Product team",
+                "Engineering team",
+                "Design team",
+                "QA team",
+                "End-users"
+            ],
+            "HighLevelPlans": "Development will follow an agile methodology, focusing on iterative releases to gather user feedback while enforcing privacy protocols."
+        },
+        "ValuesStatements": [
+            "Transparency in everything we do.",
+            "Artifacts are king.",
+            "Make it work, make it right, make it fast.",
+            "Security first, defence in depth.",
+            "Respect user privacy."
+        ],
+        "KPIs_Metrics": {
+            "UserEngagement": "Track daily active users and session duration while monitoring feedback on privacy changes.",
+            "Performance": "Measure app load time and crash reports.",
+            "Security": "Monitor the number of security vulnerabilities reported and track user complaints about privacy."
+        },
+        "RequirementsDocumentation": {
+            "UserStories": [
+                "As a user, I want to log in securely with my email and password.",
+                "As a user, I want the option to connect with other expats but have control over what I share."
+            ],
+            "UseCases": [
+                "User registration and authentication",
+                "User profile creation and management"
+            ]
+        },
+        "DesignDocuments": {
+            "Wireframes": "Link to wireframes for the app's user interface.",
+            "Mockups": "Link to mockups for visual representation.",
+            "TechnicalSpecifications": "Link to technical specifications for backend architecture."
+        },
+        "ProjectPlan": "Timeline includes sprints for development, testing, and release phases, with key milestones at the end of each sprint, incorporating privacy checks.",
+        "MeetingCadences": "Weekly stand-up meetings to discuss progress and bi-weekly retrospectives for reflection.",
+        "CommunicationPlan": {
+            "Tools": [
+                "Hipchat for instant communication",
+                "Teams for video conferencing",
+                "Asana for project planning"
+            ],
+            "Frequency": "Private team Daily check-ins and weekly team syncs.",
+            "Channels": "Dedicated channels for frontend and backend developments."
+        },
+        "ProgressReports": "Weekly updates will be shared via email outlining progress on KPIs and user privacy metrics.",
+        "CodeRepositories": "https://github.com/internations",
+        "TestPlans_TestCases": {
+            "TestingStrategy": "Automated tests for major features, manual tests for edge cases, especially concerning privacy features.",
+            "TestCases": [
+                "Test user login functionality.",
+                "Test data input validation on user forms.",
+                "Test sharing functionality for compliance with privacy constraints."
+            ]
+        },
+        "DeploymentProcesses": {
+            "Methodology": "Utilizing CI/CD pipelines for automated deployment with additional checks for privacy compliance.",
+            "Scripts": "Available via the code repository."
+        },
+        "UserDocumentation": "https://help.internations.org",
+        "TechnicalDocumentation": "https://api.internations.org/docs",
+        "ContinuousImprovementReports": {
+            "ActionItems": [
+                "Implement regular feedback loops with users about privacy.",
+                "Increase collaboration between frontend and backend teams."
+            ],
+            "Feedback": {
+                "DateCreated": "2023-10-01",
+                "Stop": "Stop allowing features that allow for sharing content with others.",
+                "Start": "Start prioritizing privacy in all user interactions.",
+                "Continue": "Continue prioritizing security and performance in all aspects of development."
+            }
+        }
+    },
+    "ChangeComplexityScore": "medium",
+    "Challenges": [
+        "Modifying existing features to restrict sharing may lead to user dissatisfaction and impact user engagement.",
+        "Increased focus on privacy may require additional development time and resources to enforce new constraints, which may affect timelines.",
+        "Potential risks include backlash from users who enjoyed the sharing feature, leading to decreased user retention."
+    ],
+    "Advantages": [
+        "Aligns with the enhanced focus on security and user privacy, appealing to users concerned about personal data.",
+        "May build user trust and satisfaction by empowering them with more control over their shared information.",
+        "Could potentially attract new users who prioritize privacy in digital communications."
+    ],
+    "ChangeImpactAreas": {
+        "MissionCharter": "The NorthStar and Objectives are updated to emphasize user privacy and control over shared content.",
+        "ValuesStatements": "The addition of 'Respect user privacy' underscores the importance of user privacy within team values.",
+        "KPIs_Metrics": "User engagement metrics are refined to monitor reactions specifically to the absence of sharing features.",
+        "RequirementsDocumentation": "User stories are adapted to reflect new privacy concerns and controls over shared content.",
+        "ContinuousImprovementReports": "Action items now include user feedback specifically about privacy adaptations."
+    }
+}

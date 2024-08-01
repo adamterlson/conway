@@ -1,0 +1,78 @@
+{
+  "TeamAPI": {
+    "MissionCharter": {
+      "NorthStar": "Build a mobile self-checkout solution that enhances the shopping experience.",
+      "Mission": "To deliver a seamless and convenient mobile checkout experience for Best Buy customers.",
+      "Objectives": [
+        "Create a user-friendly interface that reduces checkout time.",
+        "Ensure high levels of security for customer transactions.",
+        "Integrate with existing systems for inventory and payment processing."
+      ],
+      "Scope": "Development and deployment of a mobile application for self-checkout.",
+      "Stakeholders": [
+        "Best Buy customers",
+        "Product owners",
+        "Azure Platform team"
+      ],
+      "HighLevelPlans": "Phase development into user research, design, implementation, and testing."
+    },
+    "ValuesStatements": [
+      "Artifacts are king.",
+      "Make it work, make it right, make it fast.",
+      "Security first, defence in depth."
+    ],
+    "KPIsandMetrics": {
+      "HealthCheck": "Green",
+      "QualitativeFeedback": {
+        "Insight": "Users appreciate the quick checkout process."
+      },
+      "QuantitativeFeedback": {
+        "Target": "Reduce checkout time to under 1 minute.",
+        "Current": "Checkout time averages 1.5 minutes."
+      }
+    },
+    "RequirementsDocumentation": "User stories detailing required features for checkout functionality.",
+    "DesignDocuments": "Detailed mockups and wireframes for the mobile application\u2019s UI.",
+    "ProjectPlan": "Timeline includes major milestones for user research, initial designs, development sprints, and testing phases.",
+    "MeetingCadences": "Weekly standups and bi-weekly sprint reviews.",
+    "CommunicationPlan": "Use Slack for internal communication, regular email updates for stakeholders, and JIRA for project management tracking.",
+    "CodeRepositories": "GitHub repository for source code management.",
+    "TestPlansandTestCases": "Documentation outlining test cases for functional and non-functional testing.",
+    "DeploymentProcesses": "Process includes CI/CD pipeline for frequent and automated deployment.",
+    "UserDocumentation": "https://bestbuy.com/self-checkout/guides",
+    "TechnicalDocumentation": "https://bestbuy.com/self-checkout/docs",
+    "ContinuousImprovementReports": {
+      "ActionItems": "Integrate user feedback for iterative design improvements.",
+      "Feedback": {
+        "DateCreated": "2023-10-31",
+        "Stop": "Stop ignoring edge cases in checkout scenarios.",
+        "Start": "Start conducting usability testing with real users under age 25.",
+        "Continue": "Continue collaboration with the Azure Platform team for infrastructure support."
+      }
+    },
+    "RolesandResponsibilities": {
+      "ProductOwner": "Define product vision and manage backlog.",
+      "EngineeringTeam": "Develop and implement the mobile application.",
+      "Designers": "Create user-focused designs for the interface."
+    },
+    "RiskManagement": "Identify potential risks such as data breaches and customer dissatisfaction, with strategies to mitigate these risks.",
+    "FeedbackMechanisms": "Implement regular surveys and interviews with users to gather feedback and improve the product.",
+    "StakeholderEngagement": {
+      "EngagementPlan": "Frequent updates and demos for product owners, with monthly user feedback sessions.",
+      "StakeholderDistance": {
+        "nearest": [
+          "Product owners"
+        ],
+        "near": [
+          "Best Buy customers"
+        ],
+        "far": [
+          "Management"
+        ],
+        "farthest": [
+          "External partners"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+// model Team {
+//     type: "Stream-aligned" | "Platform" | "Enablement" | "Complicated sub-system";
+//     mission: string;
+//     interactions: InteractionMode[];
+//   }
+//   model InteractionMode {
+//     type: "Collaboration" | "X-as-a-Service" | "Facilitating";
+//     bandwidth: "High" | "Medium" | "Low";
+//     parent_team: Team;
+//     child_team: Team;
+//     duration: string;
+//     purpose: string;
+//   }
+{
+    "nodes": [
+        {
+            "id": 1,
+            "type": "Stream-aligned",
+            "mission": "To build the new InterNations mobile application"
+        },
+        {
+            "id": 2,
+            "type": "Platform",
+            "mission": "To build reusable components that application development teams can use to accelerate delivery and adherence to standards"
+        },
+        {
+            "id": 3,
+            "type": "Enablement",
+            "mission": "To provide engineering knowledge, best-practices, and guidelines for application development teams"
+        }
+    ],
+    "links": [
+        {
+            "source": 2,
+            "target": 1,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "Low",
+                "duration": "Continuous",
+                "purpose": "Build reusable components that accelerate delivery of InterNations mobile application"
+            }
+        },
+        {
+            "source": 3,
+            "target": 1,
+            "value": {
+                "type": "Facilitating",
+                "bandwidth": "High",
+                "duration": "Two Months",
+                "purpose": "Support the onboarding of new team members learning unfamiliar mobile development technologies"
+            }
+        }
+    ]
+}
