@@ -52,19 +52,31 @@
         }
     </style>
 </head>
-<body>
+<body style="
+    background-color: {% if topology_type == 'Stream-aligned' %}#e0f7fa{% elif topology_type == 'Enablement' %}#fbe9e7{% elif topology_type == 'Platform' %}#fff3e0{% else %}#ffffff{% endif %};
+    color: {% if topology_type == 'Stream-aligned' %}#2e7d32{% elif topology_type == 'Enablement' %}#d32f2f{% elif topology_type == 'Platform' %}#ff6f00{% else %}#000000{% endif %};
+">
     <form action="/submit" method="post">
         <label for="team_description">Team API</label>
         <p>Begin by writing a little bit about the team.</p>
         <textarea id="team_description" name="team_description" required placeholder="What is your team's North Star? What is your mission statement? Who is your customer and how do you serve them?">The marketing team's purpose is to help people find our company by educating and sharing useful information on a multitude of platforms.</textarea><br><br>
         
         {% if north_star %}
+            <p>Topology Type: {{ topology_type }}</p>
+
+            <h1>Identification</h1>
+            <p>Characteristics clearly define the team and its purpose.</p>
+
             <label for="northStar">North Star:</label>
             <textarea type="text" id="northStar" name="northStar">{{ north_star }}</textarea><br><br>
             
             <label for="mission">Mission:</label>
             <textarea id="mission" name="mission">{{ mission }}</textarea><br><br>
+
             
+
+            <h1>Interactions</h1>
+            <p>Modes of interaction with other teams, including collaboration and service dependencies.</p>
             <label>Stakeholders:</label><br>
             
             {% for group, stakeholders in stakeholders.items() %}
@@ -74,8 +86,11 @@
             </fieldset><br>
             {% endfor %}
             
+
+            <h1>Responsibilities</h1>
+            <p>The primary duties, objectives, and deliverables expected from the team.</p>
             <label>KPIs:</label><br>
-            
+                        
             {% for kpi in kpis %}
             <div class="kpi">
                 <div class="form-group">
@@ -99,8 +114,10 @@
                     <textarea id="outbound-{{ loop.index }}" name="outbound-{{ loop.index }}">{{ kpi.outbound }}</textarea>
                 </div>
             </div>
-        {% endfor %}
-            <b>{{team_api}}</b>
+            {% endfor %}
+            
+            <h1>Artifacts</h1>
+            <p>The outputs, documents, and tools produced and maintained by the team.</p>
         {% endif %}
         <input type="submit" value="Submit">
     </form>

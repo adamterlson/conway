@@ -5,6 +5,7 @@ Create a list of stakeholders for this mission.
 Create a list of kpis for this mission. KPIs are important to stakeholders, specific, measurable, relevant, achievable.
 
 JSON {
+    topology_type: Stream-aligned, Enablement, Platform, or Complicated Sub-system
     north_star: north star
     mission: mission statement
     vision: vision statement
