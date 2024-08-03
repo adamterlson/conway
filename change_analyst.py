@@ -17,13 +17,12 @@ content = f"""
     {file_content}
     </Impacted Team API>
     
-    <Response Format>
+    JSON response with format
         New Team API: The New Team API
-        Change Complexity Score: specify low, medium, or high complexity to implement the Change. Base the score on the number and type of differences between the Impacted Team API and the New Team API
-        Challenges: compared to the current state, identify the reasons the Change is complex, expensive, or untenable. Includes specific risks identified by the Change that uniquely impact this team and how. Be as specific and complete as possible.
-        Advantages: compared to the current state, identify the reasons why the Change is beneficial and positive, including how they align with the Impacted Team API's mission, values, and project goals. Be as specific and complete as possible.
+        Change Complexity Score: specify low, medium, or high complexity to implement the Change
+        Challenges: Why the Change is complex, expensive, or untenable. Includes specific risks identified by the Change that uniquely impact this team and how. Be as specific and complete as possible.
+        Advantages: Why why the Change is beneficial and positive, including how they align with the Impacted Team API's mission, values, and project goals. Be as specific and complete as possible.
         Change Impact Areas: compare the Impacted Team API to the New Team API. respond with the specific JSON keys that are affected by the Change and a summary of the change.
-    </Response Format>
 """.replace('\n', '').replace('    ', '')
 completion = client.chat.completions.create(
     model="gpt-4o-mini",

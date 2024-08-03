@@ -1,16 +1,3 @@
-// model Team {
-//     type: "Stream-aligned" | "Platform" | "Enablement" | "Complicated sub-system";
-//     mission: string;
-//     interactions: InteractionMode[];
-//   }
-//   model InteractionMode {
-//     type: "Collaboration" | "X-as-a-Service" | "Facilitating";
-//     bandwidth: "High" | "Medium" | "Low";
-//     parent_team: Team;
-//     child_team: Team;
-//     duration: string;
-//     purpose: string;
-//   }
 {
     "nodes": [
         {
@@ -27,6 +14,16 @@
             "id": 3,
             "type": "Enablement",
             "mission": "To provide engineering knowledge, best-practices, and guidelines for application development teams"
+        },
+        {
+            "id": 4,
+            "type": "Complex-subsystem",
+            "mission": "To develop and maintain the core payment processing engine"
+        },
+        {
+            "id": 5,
+            "type": "Platform",
+            "mission": "To manage and provide the CI/CD pipelines and infrastructure as code templates"
         }
     ],
     "links": [
@@ -49,6 +46,47 @@
                 "duration": "Two Months",
                 "purpose": "Support the onboarding of new team members learning unfamiliar mobile development technologies"
             }
+        },
+        {
+            "source": 4,
+            "target": 1,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "Medium",
+                "duration": "Ongoing",
+                "purpose": "Provide payment processing functionality to be integrated with the mobile application"
+            }
+        },
+        {
+            "source": 5,
+            "target": 2,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "High",
+                "duration": "Continuous",
+                "purpose": "Provide CI/CD pipelines and infrastructure templates for component deployment"
+            }
+        },
+        {
+            "source": 5,
+            "target": 1,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "Medium",
+                "duration": "Continuous",
+                "purpose": "Enable rapid deployment of the mobile application using CI/CD pipelines"
+            }
+        },
+        {
+            "source": 3,
+            "target": 4,
+            "value": {
+                "type": "Facilitating",
+                "bandwidth": "High",
+                "duration": "One Month",
+                "purpose": "Provide best practices and guidelines for developing and maintaining the payment processing engine"
+            }
         }
     ]
 }
+```

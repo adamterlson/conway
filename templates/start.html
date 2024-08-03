@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #2e7d32;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            background-color: #ffffff;
+            border: 2px solid #2e7d32;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 500px;
+            box-sizing: border-box;
+        }
+        label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #2e7d32;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #2e7d32;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+        input[type="submit"]:hover {
+            background-color: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <label for="team_description">Team API</label>
+        <p>Begin by writing a little bit about the team.</p>
+        <textarea id="team_description" name="team_description" required placeholder="What is your team's North Star? What is your mission statement? Who is your customer and how do you serve them?">The marketing team's purpose is to help people find our company by educating and sharing useful information on a multitude of platforms.</textarea><br><br>
+        
+        {% if north_star %}
+            <label for="northStar">North Star:</label>
+            <textarea type="text" id="northStar" name="northStar">{{ north_star }}</textarea><br><br>
+            
+            <label for="mission">Mission:</label>
+            <textarea id="mission" name="mission">{{ mission }}</textarea><br><br>
+            
+            <label>Stakeholders:</label><br>
+            
+            {% for group, stakeholders in stakeholders.items() %}
+            <fieldset>
+                <legend>{{ group }}</legend>
+                <textarea name="stakeholders">{{ stakeholders }}</textarea><br><br>
+            </fieldset><br>
+            {% endfor %}
+            
+            <label>KPIs:</label><br>
+            
+            {% for kpi in kpis %}
+            <div class="kpi">
+                <div class="form-group">
+                    <label for="objective-{{ loop.index }}">Objective:</label>
+                    <input type="text" id="objective-{{ loop.index }}" name="objective-{{ loop.index }}" value="{{ kpi.objective }}">
+                </div>
+                <div class="form-group">
+                    <label for="justification-{{ loop.index }}">Justification:</label>
+                    <textarea id="justification-{{ loop.index }}" name="justification-{{ loop.index }}">{{ kpi.justification }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="measurement-{{ loop.index }}">Measurement:</label>
+                    <textarea id="measurement-{{ loop.index }}" name="measurement-{{ loop.index }}">{{ kpi.measurement }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inbound-{{ loop.index }}">Inbound:</label>
+                    <textarea id="inbound-{{ loop.index }}" name="inbound-{{ loop.index }}">{{ kpi.inbound }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="outbound-{{ loop.index }}">Outbound:</label>
+                    <textarea id="outbound-{{ loop.index }}" name="outbound-{{ loop.index }}">{{ kpi.outbound }}</textarea>
+                </div>
+            </div>
+        {% endfor %}
+            <b>{{team_api}}</b>
+        {% endif %}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
