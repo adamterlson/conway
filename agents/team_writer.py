@@ -9,11 +9,16 @@ JSON {
     north_star: north star
     mission: mission statement
     vision: vision statement
-    stakeholders: list of {
-        core: the core/key stakeholders as string
-        supportive: the supportive/influence stakeholders as string
-        peripheral: external peripheral stakeholders as string
-    }
+    stakeholders:
+        core: 
+            description: definition of a core stakeholder
+            value: the list of core/key stakeholders as string
+        supportive: 
+            description: definition of a supportive stakeholder
+            value: the list of supportive/influence stakeholders as string
+        peripheral: 
+            description: definition of a supportive stakeholder
+            value: the list of external peripheral stakeholders as string
     kpis: list of {
         objective: the objective
         justification: the justification for the objective

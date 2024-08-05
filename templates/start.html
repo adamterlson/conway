@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team API</title>
+    <title>New Team API</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,6 +14,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
         form {
             background-color: #ffffff;
@@ -24,10 +25,19 @@
             width: 500px;
             box-sizing: border-box;
         }
+        fieldset {
+            margin-bottom: 1em;
+        }
+        legend {
+            font-size: 1.2em
+        }
         label {
             font-size: 1.2em;
             margin-bottom: 10px;
             display: block;
+        }
+        fieldset label {
+            font-size: 1em;
         }
         textarea {
             width: 100%;
@@ -38,8 +48,9 @@
             border-radius: 5px;
             font-size: 1em;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-        input[type="submit"] {
+        button {
             background-color: #2e7d32;
             color: #ffffff;
             border: none;
@@ -47,8 +58,23 @@
             padding: 10px 20px;
             font-size: 1em;
         }
-        input[type="submit"]:hover {
+        button:hover {
             background-color: #1b5e20;
+        }
+        button.secondary {
+            background-color: #888;
+        }
+        button.secondary:hover {
+            background-color: #666;
+        }
+        .step {
+            display: none;
+        }
+        .step.active {
+            display: block;
+        }
+        .navigation {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -56,70 +82,113 @@
     background-color: {% if topology_type == 'Stream-aligned' %}#e0f7fa{% elif topology_type == 'Enablement' %}#fbe9e7{% elif topology_type == 'Platform' %}#fff3e0{% else %}#ffffff{% endif %};
     color: {% if topology_type == 'Stream-aligned' %}#2e7d32{% elif topology_type == 'Enablement' %}#d32f2f{% elif topology_type == 'Platform' %}#ff6f00{% else %}#000000{% endif %};
 ">
+    <h1>Team API</h1>
     <form action="/submit" method="post">
-        <label for="team_description">Team API</label>
-        <p>Begin by writing a little bit about the team.</p>
-        <textarea id="team_description" name="team_description" required placeholder="What is your team's North Star? What is your mission statement? Who is your customer and how do you serve them?">The marketing team's purpose is to help people find our company by educating and sharing useful information on a multitude of platforms.</textarea><br><br>
-        
-        {% if north_star %}
-            <p>Topology Type: {{ topology_type }}</p>
+        {% if not north_star %}
+            <p>Begin by writing a little bit about the team.</p>
+            <textarea id="team_description" name="team_description" required placeholder="What is your team's North Star? What is your mission statement? Who is your customer and how do you serve them?">The marketing team's purpose is to help people find our company by educating and sharing useful information on a multitude of platforms.</textarea><br><br>
+            <input type="submit" title="Get Started" />
+        {% else %}
+            <p>It looks like this team is a <b>{{ topology_type }}</b> team. <a href="javascript:void(0);">Disagree?</a></p>
+             <!-- Step 1 -->
+            <div class="step active">
 
-            <h1>Identification</h1>
-            <p>Characteristics clearly define the team and its purpose.</p>
+                <h1>Identification</h1>
+                <p>Characteristics that clearly define the team and its purpose.</p>
 
-            <label for="northStar">North Star:</label>
-            <textarea type="text" id="northStar" name="northStar">{{ north_star }}</textarea><br><br>
-            
-            <label for="mission">Mission:</label>
-            <textarea id="mission" name="mission">{{ mission }}</textarea><br><br>
+                <label for="northStar">North Star</label>
+                <textarea type="text" id="northStar" name="northStar">{{ north_star }}</textarea><br><br>
+                
+                <label for="mission">Mission</label>
+                <textarea id="mission" name="mission">{{ mission }}</textarea><br><br>
 
-            
-
-            <h1>Interactions</h1>
-            <p>Modes of interaction with other teams, including collaboration and service dependencies.</p>
-            <label>Stakeholders:</label><br>
-            
-            {% for group, stakeholders in stakeholders.items() %}
-            <fieldset>
-                <legend>{{ group }}</legend>
-                <textarea name="stakeholders">{{ stakeholders }}</textarea><br><br>
-            </fieldset><br>
-            {% endfor %}
-            
-
-            <h1>Responsibilities</h1>
-            <p>The primary duties, objectives, and deliverables expected from the team.</p>
-            <label>KPIs:</label><br>
-                        
-            {% for kpi in kpis %}
-            <div class="kpi">
-                <div class="form-group">
-                    <label for="objective-{{ loop.index }}">Objective:</label>
-                    <input type="text" id="objective-{{ loop.index }}" name="objective-{{ loop.index }}" value="{{ kpi.objective }}">
-                </div>
-                <div class="form-group">
-                    <label for="justification-{{ loop.index }}">Justification:</label>
-                    <textarea id="justification-{{ loop.index }}" name="justification-{{ loop.index }}">{{ kpi.justification }}</textarea>
-                </div>
-                <div class="form-group">
-                    <label for="measurement-{{ loop.index }}">Measurement:</label>
-                    <textarea id="measurement-{{ loop.index }}" name="measurement-{{ loop.index }}">{{ kpi.measurement }}</textarea>
-                </div>
-                <div class="form-group">
-                    <label for="inbound-{{ loop.index }}">Inbound:</label>
-                    <textarea id="inbound-{{ loop.index }}" name="inbound-{{ loop.index }}">{{ kpi.inbound }}</textarea>
-                </div>
-                <div class="form-group">
-                    <label for="outbound-{{ loop.index }}">Outbound:</label>
-                    <textarea id="outbound-{{ loop.index }}" name="outbound-{{ loop.index }}">{{ kpi.outbound }}</textarea>
-                </div>
             </div>
-            {% endfor %}
-            
-            <h1>Artifacts</h1>
-            <p>The outputs, documents, and tools produced and maintained by the team.</p>
+            <div class="step">
+                <h1>Interactions</h1>
+                <p>Modes of interaction with other teams, including collaboration and service dependencies.</p>
+                <h2>Stakeholders</h2>
+                
+                {% for key, value in stakeholders.items() %}
+                    <label for="stakeholder-{{ loop.index }}">{{ key | capitalize }} Stakeholders</label>
+                    <p>{{value.description}}</p>
+                    <textarea id="stakeholder-{{ loop.index }}" name="stakeholder-{{ loop.index }}">{{ value.value }}</textarea><br><br>
+                {% endfor %}
+            </div>
+            <div class="step">
+                <h1>Responsibilities</h1>
+                <p>The primary duties, objectives, and deliverables expected from the team.</p>
+                <h2>KPIs</h2>
+                            
+                {% for kpi in kpis %}
+                <fieldset>
+                    <legend>KPI {{ loop.index }}</legend>
+                    <div class="form-group">
+                        <label for="objective-{{ loop.index }}">Objective</label>
+                        <textarea id="objective-{{ loop.index }}" name="objective-{{ loop.index }}">{{ kpi.objective }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="justification-{{ loop.index }}">Justification</label>
+                        <textarea id="justification-{{ loop.index }}" name="justification-{{ loop.index }}">{{ kpi.justification }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="measurement-{{ loop.index }}">Measurement</label>
+                        <textarea id="measurement-{{ loop.index }}" name="measurement-{{ loop.index }}">{{ kpi.measurement }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="inbound-{{ loop.index }}">Inbound</label>
+                        <textarea id="inbound-{{ loop.index }}" name="inbound-{{ loop.index }}">{{ kpi.inbound }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="outbound-{{ loop.index }}">Outbound</label>
+                        <textarea id="outbound-{{ loop.index }}" name="outbound-{{ loop.index }}">{{ kpi.outbound }}</textarea>
+                    </div>
+                </fieldset>
+                {% endfor %}
+            </div>
+
+            <div class="step">
+                <h1>Artifacts</h1>
+                <p>The outputs, documents, and tools produced and maintained by the team.</p>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="navigation">
+                <button type="button" id="prevBtn" class="secondary" onclick="changeStep(-1); return false">Previous</button>
+                <button type="button" id="nextBtn" onclick="changeStep(1); return false">Next</button>
+            </div>
         {% endif %}
-        <input type="submit" value="Submit">
     </form>
+
+    <script>
+        let currentStep = 0;
+        showStep(currentStep);
+
+        function showStep(step) {
+            const steps = document.getElementsByClassName("step");
+            steps[step].classList.add("active");
+            if (step === 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (step === (steps.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+                document.getElementById("nextBtn").setAttribute("type", "submit");
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+                document.getElementById("nextBtn").setAttribute("type", "button");
+            }
+        }
+
+        function changeStep(n) {
+            const steps = document.getElementsByClassName("step");
+            steps[currentStep].classList.remove("active");
+            currentStep = currentStep + n;
+            if (currentStep > steps.length) {
+                document.getElementById("multiStepForm").submit();
+                return false;
+            }
+            showStep(currentStep);
+        }
+    </script>
 </body>
 </html>
