@@ -1,0 +1,57 @@
+{
+    "topology_type": "Enablement",
+    "north_star": "To empower development teams by providing the necessary support, education, and tools to maximize productivity and innovation.",
+    "mission": "To unblock, enable, and accelerate the development process by offering comprehensive support, training, and documentation to all engineering teams.",
+    "vision": "To foster an environment where development teams can work efficiently, overcome obstacles quickly, and continuously improve their skills and processes.",
+    "stakeholders": {
+        "core": {
+            "description": "Individuals or teams directly receiving support and enablement services.",
+            "value": "Product Engineering Teams, Backend Development Teams, DevX Team"
+        },
+        "supportive": {
+            "description": "Individuals or teams that influence or support the Enablement team's initiatives.",
+            "value": "CloudFoundation Team, Delivery Team, Observability Team"
+        },
+        "peripheral": {
+            "description": "External or less directly involved stakeholders who have an interest in the Enablement team's outcomes.",
+            "value": "InfoSec Team, FinOps Team, Operations Team, Business Leadership"
+        }
+    },
+    "kpis": [
+        {
+            "objective": "Reduce time to resolve development blockers.",
+            "justification": "Faster resolution of blockers increases overall development speed and productivity.",
+            "measurement": "Average time taken to resolve support requests and unblock teams.",
+            "inbound": "Support ticket system, developer feedback",
+            "outbound": "Monthly support performance reports to Engineering Teams"
+        },
+        {
+            "objective": "Increase developer satisfaction with support services.",
+            "justification": "Higher satisfaction correlates with improved productivity and morale.",
+            "measurement": "Developer satisfaction scores from regular internal surveys.",
+            "inbound": "Internal developer surveys",
+            "outbound": "Quarterly satisfaction reports to Engineering Leadership"
+        },
+        {
+            "objective": "Enhance the quality and accessibility of documentation.",
+            "justification": "Good documentation reduces the learning curve and helps developers solve problems independently.",
+            "measurement": "Documentation usage metrics and developer feedback on documentation quality.",
+            "inbound": "Documentation analytics, developer feedback forms",
+            "outbound": "Bi-monthly documentation reports to Development Teams"
+        },
+        {
+            "objective": "Increase the adoption of best practices and tools.",
+            "justification": "Adopting best practices and tools improves the consistency and quality of development across teams.",
+            "measurement": "Number of teams adopting recommended practices and tools.",
+            "inbound": "Adoption tracking tools, team feedback",
+            "outbound": "Quarterly adoption reports to Engineering Leadership"
+        },
+        {
+            "objective": "Improve collaboration between the Enablement team and core stakeholders.",
+            "justification": "Better collaboration leads to more effective support and alignment with development needs.",
+            "measurement": "Frequency and quality of collaboration meetings and joint initiatives.",
+            "inbound": "Meeting logs, project tracking tools",
+            "outbound": "Quarterly collaboration reports to all stakeholders"
+        }
+    ]
+}

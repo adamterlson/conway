@@ -1,0 +1,28 @@
+<h2>Overall Score: {{ overall }}</h2>
+
+<h3>Quality Checks</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Label</th>
+            <th>Score</th>
+            <th>Justification</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for check in quality_checks %}
+        <tr class="grade-{{check.score}}">
+            <td>{{ check.label }}</td>
+            <td>{{ check.score }}</td>
+            <td>{{ check.justification }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Suggestions</h3>
+<ul>
+    {% for suggestion in suggestions %}
+    <li>{{ suggestion }}</li>
+    {% endfor %}
+</ul>

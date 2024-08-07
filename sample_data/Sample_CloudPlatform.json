@@ -1,0 +1,71 @@
+{
+    "topology_type": "Platform",
+    "north_star": "To provide a robust, scalable, and secure cloud platform that empowers all development teams to innovate and deliver high-quality software efficiently.",
+    "mission": "To design, build, and maintain a comprehensive cloud platform and supporting tools that enhance the productivity, security, and reliability of the organization's software development efforts.",
+    "vision": "To be the foundation of the organization's technological innovation, enabling seamless development and operations with a focus on performance, security, and developer satisfaction.",
+    "stakeholders": {
+        "core": {
+            "description": "Individuals or teams that directly use and benefit from the cloud platform and its services.",
+            "value": "Product Engineering Teams, Backend Development Teams"
+        },
+        "supportive": {
+            "description": "Individuals or teams that influence, support, or collaborate with the Cloud Platform organization.",
+            "value": "InfoSec Team, FinOps Team, Operations Team, Business Leadership"
+        },
+        "peripheral": {
+            "description": "External or less directly involved stakeholders who have an interest in the Cloud Platform organization's outcomes.",
+            "value": "External Partners, Regulatory Bodies"
+        }
+    },
+    "kpis": [
+        {
+            "objective": "Ensure high availability and reliability of the cloud platform.",
+            "justification": "High availability and reliability are crucial for uninterrupted development and operational efficiency.",
+            "measurement": "Platform uptime percentage and number of service interruptions.",
+            "inbound": "Monitoring tools, service reports",
+            "outbound": "Monthly availability and reliability reports to all stakeholders"
+        },
+        {
+            "objective": "Optimize cloud resource utilization and cost.",
+            "justification": "Efficient resource utilization reduces costs and improves overall performance.",
+            "measurement": "Cloud cost metrics and resource usage analytics.",
+            "inbound": "Cloud usage reports, cost analysis tools",
+            "outbound": "Quarterly cost optimization reports to FinOps and Engineering Leadership"
+        },
+        {
+            "objective": "Enhance security and compliance of the cloud platform.",
+            "justification": "Robust security practices protect data and ensure regulatory compliance.",
+            "measurement": "Number of security incidents and compliance audit results.",
+            "inbound": "Security monitoring tools, audit reports",
+            "outbound": "Monthly security and compliance reports to InfoSec and Business Leadership"
+        },
+        {
+            "objective": "Improve developer experience with the cloud platform.",
+            "justification": "A positive developer experience leads to higher productivity and satisfaction.",
+            "measurement": "Developer satisfaction scores from internal surveys and feedback.",
+            "inbound": "Internal developer surveys, feedback forms",
+            "outbound": "Quarterly satisfaction reports to Product and Engineering Teams"
+        },
+        {
+            "objective": "Reduce time to provision and configure cloud resources.",
+            "justification": "Faster provisioning accelerates development and deployment cycles.",
+            "measurement": "Average time taken to provision and configure new cloud resources.",
+            "inbound": "Provisioning logs, developer feedback",
+            "outbound": "Bi-monthly provisioning reports to Development Teams"
+        },
+        {
+            "objective": "Increase adoption of best practices and tools across the organization.",
+            "justification": "Adopting best practices and tools improves consistency and quality across development teams.",
+            "measurement": "Number of teams adopting recommended practices and tools.",
+            "inbound": "Adoption tracking tools, team feedback",
+            "outbound": "Quarterly adoption reports to Engineering Leadership"
+        },
+        {
+            "objective": "Enhance collaboration and communication across all teams.",
+            "justification": "Better collaboration leads to more effective problem-solving and innovation.",
+            "measurement": "Frequency and quality of collaboration meetings and initiatives.",
+            "inbound": "Meeting logs, project tracking tools",
+            "outbound": "Quarterly collaboration reports to all stakeholders"
+        }
+    ]
+}

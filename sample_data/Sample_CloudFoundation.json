@@ -1,0 +1,57 @@
+{
+    "topology_type": "Platform",
+    "north_star": "To provide a reliable, scalable, and secure cloud infrastructure that empowers development teams to deliver high-quality software efficiently.",
+    "mission": "To design, build, and maintain the foundational cloud infrastructure and core services that support and accelerate software development across the organization.",
+    "vision": "To create a seamless and resilient cloud environment that enables innovation, reduces operational complexity, and ensures robust performance and security.",
+    "stakeholders": {
+        "core": {
+            "description": "Individuals or teams directly utilizing the cloud infrastructure and core services.",
+            "value": "Product Engineering Teams, Backend Development Teams, DevX Team"
+        },
+        "supportive": {
+            "description": "Individuals or teams that influence or support the CloudFoundation team's initiatives.",
+            "value": "Platform Engineering Team, InfoSec Team, Delivery Team"
+        },
+        "peripheral": {
+            "description": "External or less directly involved stakeholders who have an interest in the CloudFoundation team's outcomes.",
+            "value": "Operations Team, FinOps Team, Business Leadership"
+        }
+    },
+    "kpis": [
+        {
+            "objective": "Ensure high availability of cloud services.",
+            "justification": "High availability is critical to maintain productivity and prevent disruptions.",
+            "measurement": "Percentage of uptime and number of service interruptions.",
+            "inbound": "Monitoring tools, service reports",
+            "outbound": "Monthly availability reports to Engineering and Operations Teams"
+        },
+        {
+            "objective": "Optimize cloud resource utilization and cost.",
+            "justification": "Efficient resource utilization reduces costs and improves performance.",
+            "measurement": "Cloud cost metrics and resource usage analytics.",
+            "inbound": "Cloud usage reports, cost analysis tools",
+            "outbound": "Quarterly cost optimization reports to FinOps and Engineering Leadership"
+        },
+        {
+            "objective": "Enhance security and compliance of cloud infrastructure.",
+            "justification": "Robust security practices protect data and ensure regulatory compliance.",
+            "measurement": "Number of security incidents and compliance audit results.",
+            "inbound": "Security monitoring tools, audit reports",
+            "outbound": "Monthly security and compliance reports to InfoSec and Business Leadership"
+        },
+        {
+            "objective": "Improve developer experience with cloud infrastructure.",
+            "justification": "A positive developer experience leads to higher productivity and satisfaction.",
+            "measurement": "Developer satisfaction scores from internal surveys and feedback.",
+            "inbound": "Internal developer surveys, feedback forms",
+            "outbound": "Quarterly satisfaction reports to Product and Engineering Teams"
+        },
+        {
+            "objective": "Reduce time to provision and configure cloud resources.",
+            "justification": "Faster provisioning accelerates development and deployment cycles.",
+            "measurement": "Average time taken to provision and configure new cloud resources.",
+            "inbound": "Provisioning logs, developer feedback",
+            "outbound": "Bi-monthly provisioning reports to Development Teams"
+        }
+    ]
+}
