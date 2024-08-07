@@ -112,7 +112,7 @@ def checkRepoForDependency(repoPath, dependencyName):
 
     messages.append({
         "role":"user", 
-        "content":f"Does the file list {dependencyName} as a dependency?"
+        "content":f"Is {dependencyName} listed as a dependency in the file? Return only the word 'True' or 'False'."
     })
 
     model_response_final_call = client.chat.completions.create(
@@ -121,5 +121,7 @@ def checkRepoForDependency(repoPath, dependencyName):
         tools=tools
     )
     result = model_response_final_call.choices[0].message.content
-    print(result)
+    print(model_response_final_call.choices[0].message)
     return result
+
+checkRepoForDependency("http://github.com/adamterlson/cairn", "react")
