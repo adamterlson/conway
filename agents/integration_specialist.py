@@ -153,6 +153,8 @@ Do not evaluate any other intersections between the teams.
     }
   ],
   "repositories": [
+    "https://github.com/siriusxm/developer-tools",
+    "https://github.com/siriusxm/onboarding-scripts",
     "https://github.com/adamterlson/react-native-messenger"
   ],
   "knowledge_bases": {
