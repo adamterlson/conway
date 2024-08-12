@@ -22,7 +22,7 @@ def load_json_files(directory):
     return json_data
 
 def cached_integration_completion(teamAPIs):
-    with open('sample_data/Viz2.json') as f:
+    with open('sample_data/Viz3.json') as f:
         graph = json.load(f)
     
     return graph

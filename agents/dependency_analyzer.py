@@ -18,6 +18,7 @@ def fetch_github_contents(owner, repo, path='', token=None) -> str:
     try:
         response = requests.get(url, headers=headers)
         response.raise_for_status()  # Raise an exception for HTTP errors
+        print(str(response.json()))
         return str(response.json())  # Return the response content as JSON
     except requests.exceptions.RequestException as e:
         return f"An error occurred: {e}"

@@ -78,10 +78,10 @@
             "attendees": "All team members"
         },
         {
-            "meeting_type": "Weekly Sync",
+            "meeting_type": "Cloud Platform Weekly Sync",
             "frequency": "Weekly",
-            "purpose": "Team coordination and updates on ongoing projects.",
-            "attendees": "All team members"
+            "purpose": "Team coordination and updates for the Cloud Platform teams.",
+            "attendees": "Cloud Platform team members"
         }
     ],
     "stakeholders": {
@@ -132,7 +132,7 @@
     ],
     "service_level_agreements": [
         {
-            "service": "Monitoring and Alerting",
+            "service": "Cloud Platform Dashboards",
             "SLA": "99.9% uptime for monitoring and alerting systems."
         },
         {

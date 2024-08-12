@@ -125,14 +125,14 @@
             "objective": "System Uptime",
             "justification": "High uptime ensures the self-checkout service is always available to users.",
             "measurement": "Percentage of time the system is available.",
-            "inbound": "Monitoring tools",
+            "inbound": "Cloud Platform Dashboards",
             "outbound": "Monthly uptime reports"
         },
         {
             "objective": "Average Response Time",
             "justification": "Fast response times ensure a smooth and efficient user experience.",
             "measurement": "Average time taken to complete a transaction.",
-            "inbound": "System performance logs",
+            "inbound": "Cloud Platform Dashboards",
             "outbound": "Weekly performance dashboards"
         }
     ],
@@ -156,12 +156,13 @@
     ],
     "knowledge_bases": {
         "user_guides": [
+            "https://github.com/siriusxm/golden-paths-docs",
             "https://confluence.siriusxm.com/display/SC/Self-Checkout+User+Guide",
             "https://confluence.siriusxm.com/display/SC/Mobile+App+Guide"
         ],
         "contribution_guides": [
-            "https://confluence.siriusxm.com/display/SC/Contributing+to+Self-Checkout+Mobile",
-            "https://confluence.siriusxm.com/display/SC/Contributing+to+Self-Checkout+Backend"
+            "https://github.com/siriusxm/self-checkout-mobile/CONTRIBUTING.md",
+            "https://github.com/siriusxm/self-checkout-backend/CONTRIBUTING.md"
         ],
         "design_documentation": [
             "https://confluence.siriusxm.com/display/SC/Self-Checkout+Architecture",

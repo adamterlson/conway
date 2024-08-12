@@ -1,0 +1,93 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "label": "Enablement",
+            "data": {
+                "type": "Enablement",
+                "team_name": "Enablement",
+                "mission": "To unblock and support development teams, ensuring they have the tools, knowledge, and resources needed to deliver high-quality software efficiently and effectively."
+            }
+        },
+        {
+            "id": 2,
+            "label": "Observability",
+            "data": {
+                "type": "Platform",
+                "team_name": "Observability",
+                "mission": "To provide robust monitoring, logging, and alerting solutions that ensure system reliability, performance, and security across the SiriusXM ecosystem."
+            }
+        },
+        {
+            "id": 3,
+            "label": "Self-Checkout",
+            "data": {
+                "type": "Stream-aligned",
+                "team_name": "Self-Checkout",
+                "mission": "To build and maintain the self-checkout product, ensuring it delivers a high-quality, user-friendly experience while utilizing scalable and secure cloud infrastructure."
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": 1,
+            "target": 3,
+            "type": "Collaboration",
+            "data": "Enablement team is supporting Self-Checkout team's development workflows"
+        },
+        {
+            "source": 1,
+            "target": 3,
+            "type": "X-as-a-Service",
+            "data": "Enablement team is producing developer guides used by Self-Checkout team's engineers."
+        },
+        {
+            "source": 2,
+            "target": 3,
+            "type": "X-as-a-Service",
+            "data": "Observability team provides dashboards used as input to Self-Checkout's dashboards."
+        },
+        {
+            "source": 2,
+            "target": 3,
+            "type": "Collaboration",
+            "data": "Observability team collaborates with Self-Checkout team to improve system monitoring."
+        },
+        {
+            "source": 1,
+            "target": 2,
+            "type": "Collaboration",
+            "data": "Enablement team collaborates with Observability team to develop best practices for monitoring tools."
+        },
+        {
+            "source": 1,
+            "target": 3,
+            "type": "X-as-a-Service",
+            "data": "Self-Checkout uses knowledge bases maintained by Enablement team for development support."
+        },
+        {
+            "source": 3,
+            "target": 2,
+            "type": "X-as-a-Service",
+            "data": "Self-Checkout team consumes input data from Observability service level agreements for performance metrics."
+        },
+        {
+            "source": 1,
+            "target": 2,
+            "type": "Collaboration",
+            "data": "Both Enablement and Observability teams attend weekly sync meetings."
+        },
+        {
+            "source": 3,
+            "target": 1,
+            "type": "Collaboration",
+            "data": "Both Self-Checkout and Enablement teams attend daily stand-up meetings."
+        },
+        {
+            "source": 3,
+            "target": 2,
+            "type": "Collaboration",
+            "data": "Both Self-Checkout and Observability teams attend bi-weekly sprint planning meetings."
+        }
+    ]
+}

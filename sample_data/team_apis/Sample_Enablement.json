@@ -78,10 +78,10 @@
             "attendees": "All team members"
         },
         {
-            "meeting_type": "Weekly Sync",
+            "meeting_type": "Cloud Platform Weekly Sync",
             "frequency": "Weekly",
-            "purpose": "Team coordination and updates on ongoing projects.",
-            "attendees": "All team members"
+            "purpose": "Team coordination and updates for the Cloud Platform teams.",
+            "attendees": "Cloud Platform team members"
         }
     ],
     "stakeholders": {
@@ -145,8 +145,8 @@
         }
     ],
     "contributing_repositories": [
-        "https://github.com/siriusxm/developer-tools",
-        "https://github.com/siriusxm/onboarding-scripts"
+        "https://github.com/siriusxm/developer-portal",
+        "https://github.com/siriusxm/golden-paths-docs"
     ],
     "knowledge_bases": {
         "user_guides": [

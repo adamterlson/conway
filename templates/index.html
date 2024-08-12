@@ -70,6 +70,10 @@
             border-radius: 8px;
             pointer-events: none;
         }
+        .link-label {
+            font: 10px sans-serif;
+            fill: #000;
+        }
     </style>
 </head>
 <body>
@@ -90,25 +94,31 @@
             .style("opacity", 0);
 
         const colorScale = d3.scaleOrdinal()
-            .domain(["Communication", "Stakeholder"])
+            .domain(["Collaboration", "X-as-a-Service"])
             .range(["green", "red"]);
 
-        const bandwidthScale = d3.scaleOrdinal()
-            .domain(["Slack and Email", null])
-            .range([6, 3]);
-
         const simulation = d3.forceSimulation(data.nodes)
-            .force("link", d3.forceLink(data.links).id(d => d.id).distance(100))
+            .force("link", d3.forceLink(data.links).id(d => d.id).distance(200))
             .force("charge", d3.forceManyBody().strength(-300))
             .force("center", d3.forceCenter(width / 2, height / 2));
 
         const link = svg.append("g")
             .attr("class", "links")
-            .selectAll("line")
+            .selectAll("path")
             .data(data.links)
-            .enter().append("line")
-            .attr("stroke-width", d => bandwidthScale(d.data.bandwidth))
-            .attr("stroke", d => colorScale(d.data.type));
+            .enter().append("path")
+            .attr("stroke-width", 2)
+            .attr("stroke", d => colorScale(d.type))
+            .attr("fill", "none");
+
+        const linkLabel = svg.append("g")
+            .attr("class", "link-labels")
+            .selectAll("text")
+            .data(data.links)
+            .enter().append("text")
+            .attr("class", "link-label")
+            .attr("dy", -5)
+            .text(d => d.data);
 
         const node = svg.append("g")
             .attr("class", "nodes")
@@ -146,15 +156,26 @@
             .text(d => d.data.team_name);
 
         simulation.on("tick", () => {
-            link
-                .attr("x1", d => d.source.x)
-                .attr("y1", d => d.source.y)
-                .attr("x2", d => d.target.x)
-                .attr("y2", d => d.target.y);
+            link.attr("d", d => {
+                const dx = d.target.x - d.source.x;
+                const dy = d.target.y - d.source.y;
+                const dr = Math.sqrt(dx * dx + dy * dy);
+                const offset = d.index * 3; // offset based on the link index
+                return `M${d.source.x},${d.source.y}A${dr},${dr} 0 0,1 ${d.target.x},${d.target.y}A${dr+offset},${dr+offset} 0 0,0 ${d.source.x},${d.source.y}`;
+            });
 
-            node
-                .attr("transform", d => `translate(${d.x},${d.y})`);
+            linkLabel
+                .attr("x", d => (d.source.x + d.target.x) / 2)
+                .attr("y", d => (d.source.y + d.target.y) / 2);
+
+            node.attr("transform", d => `translate(${d.x},${d.y})`);
         });
+
+        // Assign an index to each link to avoid overlapping
+        data.links.forEach((link, index) => {
+            link.index = index;
+        });
+
     </script>
     <a href="/create">Create New</a>
     <ul>
