@@ -4,7 +4,6 @@ from flask import Flask, request, jsonify, render_template
 from openai import OpenAI
 from flask_caching import Cache
 from agents.team_writer import SYSTEM_ROLE as WRITER_SYSTEM_ROLE
-from agents.north_star_grader import SYSTEM_ROLE as GRADER_SYSTEM_ROLE
 import hashlib
 from pymongo import MongoClient
 from teams import teams_bp
@@ -18,6 +17,7 @@ client = OpenAI()
 app = Flask(__name__)
 app.register_blueprint(teams_bp, url_prefix='/teamapi')
 app.register_blueprint(grade_bp, url_prefix='/grade')
+app.client = client
 
 # Configure MongoDB
 mongo_client = MongoClient('localhost', 27017)
