@@ -1,0 +1,169 @@
+{
+    "team_name": "Cloud Foundation",
+    "topology_type": "Platform",
+    "north_star": "Provide a robust, secure, and scalable cloud infrastructure that enables seamless development, deployment, and operations at SiriusXM.",
+    "mission": "To build and maintain a solid cloud foundation that supports efficient, reliable, and secure application development and deployment across the organization.",
+    "vision": "To establish a world-class cloud infrastructure that ensures high availability, performance, and security, empowering development teams to innovate and deliver value rapidly.",
+    "values_principals": [
+        "Reliability: Ensure the cloud infrastructure is dependable and highly available.",
+        "Security: Implement and maintain robust security measures to protect data and applications.",
+        "Scalability: Build scalable solutions that can grow with the organization’s needs.",
+        "Efficiency: Optimize cloud resources to balance performance and cost.",
+        "Support: Provide excellent support and guidance to development teams."
+    ],
+    "team_structure": [
+        {
+            "title": "Team Lead",
+            "responsibilities": "Oversee team operations, prioritize tasks, and ensure alignment with organizational goals."
+        },
+        {
+            "title": "Cloud Engineer",
+            "responsibilities": "Design, implement, and maintain cloud infrastructure and services."
+        },
+        {
+            "title": "Security Engineer",
+            "responsibilities": "Ensure cloud infrastructure and services meet security and compliance standards."
+        },
+        {
+            "title": "DevOps Engineer",
+            "responsibilities": "Develop and maintain CI/CD pipelines and automation scripts."
+        },
+        {
+            "title": "Support Engineer",
+            "responsibilities": "Provide support and troubleshooting for cloud infrastructure issues."
+        }
+    ],
+    "priorities": [
+        "Maintain high availability and reliability of cloud infrastructure.",
+        "Implement and enforce strong security measures.",
+        "Ensure scalability to meet growing business needs.",
+        "Optimize cloud resource utilization for cost efficiency.",
+        "Provide timely and effective support to development teams."
+    ],
+    "communication_channels": [
+        {
+            "channel": "Slack",
+            "purpose": "Immediate communication and support requests."
+        },
+        {
+            "channel": "Email",
+            "purpose": "Formal communications and updates."
+        },
+        {
+            "channel": "Jira",
+            "purpose": "Task and project management."
+        },
+        {
+            "channel": "Confluence",
+            "purpose": "Documentation and knowledge sharing."
+        }
+    ],
+    "meeting_cadence": [
+        {
+            "meeting_type": "Daily Stand-up",
+            "frequency": "Daily",
+            "purpose": "Quick updates on progress, blockers, and plans for the day.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Sprint Planning",
+            "frequency": "Bi-weekly",
+            "purpose": "Plan the work for the upcoming sprint.",
+            "attendees": "Team Lead, Cloud Engineers, DevOps Engineers"
+        },
+        {
+            "meeting_type": "Sprint Retrospective",
+            "frequency": "Bi-weekly",
+            "purpose": "Reflect on the past sprint and identify areas for improvement.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Weekly Sync",
+            "frequency": "Weekly",
+            "purpose": "Team coordination and updates on ongoing projects.",
+            "attendees": "All team members"
+        }
+    ],
+    "stakeholders": {
+        "core": [
+            "Development Teams",
+            "QA Teams"
+        ],
+        "supportive": [
+            "Enablement Team",
+            "Deployment Team",
+            "Observability Team",
+            "Security Team"
+        ],
+        "peripheral": [
+            "Executive Leadership",
+            "External Partners"
+        ]
+    },
+    "performance_metrics": [
+        {
+            "objective": "Infrastructure Uptime",
+            "justification": "High uptime ensures reliability and availability of services.",
+            "measurement": "Percentage of time the infrastructure is available.",
+            "inbound": "Monitoring tools",
+            "outbound": "Monthly uptime reports"
+        },
+        {
+            "objective": "Time to Resolve Infrastructure Issues",
+            "justification": "Quick resolution minimizes downtime and disruption.",
+            "measurement": "Average time taken to resolve infrastructure-related issues.",
+            "inbound": "Incident management system",
+            "outbound": "Weekly incident reports"
+        },
+        {
+            "objective": "Security Compliance",
+            "justification": "Ensuring security standards are met is crucial for data protection.",
+            "measurement": "Percentage of compliance with security policies.",
+            "inbound": "Security audits",
+            "outbound": "Quarterly compliance reports"
+        },
+        {
+            "objective": "Resource Utilization Efficiency",
+            "justification": "Efficient resource use balances performance and cost.",
+            "measurement": "Ratio of used resources to allocated resources.",
+            "inbound": "Cloud management tools",
+            "outbound": "Monthly resource utilization reports"
+        }
+    ],
+    "service_level_agreements": [
+        {
+            "service": "Infrastructure Availability",
+            "SLA": "99.9% uptime for cloud infrastructure."
+        },
+        {
+            "service": "Issue Resolution",
+            "SLA": "Initial response within 15 minutes, 90% of issues resolved within 4 hours."
+        },
+        {
+            "service": "Security Compliance",
+            "SLA": "100% compliance with security standards and policies."
+        }
+    ],
+    "contributing_repositories": [
+        "https://github.com/siriusxm/cloud-infrastructure",
+        "https://github.com/siriusxm/security-scripts"
+    ],
+    "knowledge_bases": {
+        "user_guides": [
+            "https://confluence.siriusxm.com/display/CF/Cloud+Infrastructure+User+Guide",
+            "https://confluence.siriusxm.com/display/CF/Security+Policies+Guide"
+        ],
+        "contribution_guides": [
+            "https://confluence.siriusxm.com/display/CF/Contributing+to+Cloud+Infrastructure",
+            "https://confluence.siriusxm.com/display/CF/Incident+Management+Guide"
+        ],
+        "design_documentation": [
+            "https://confluence.siriusxm.com/display/CF/Cloud+Infrastructure+Architecture",
+            "https://confluence.siriusxm.com/display/CF/Security+Design+Documentation"
+        ],
+        "testing_documentation": [
+            "https://confluence.siriusxm.com/display/CF/Testing+Standards",
+            "https://confluence.siriusxm.com/display/CF/Test+Procedures"
+        ]
+    }
+}

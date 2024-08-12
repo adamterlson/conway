@@ -1,0 +1,170 @@
+{
+  "team_name": "DevX",
+  "topology_type": "Platform",
+  "north_star": "Create an exceptional development experience by providing robust tools, environments, and processes that enable developers to work efficiently and productively.",
+  "mission": "To enhance the developer experience by providing streamlined development environments, tools, and processes that facilitate efficient and productive software development.",
+  "vision": "To establish a development ecosystem where every developer has the tools and support needed to innovate and deliver high-quality software quickly and efficiently.",
+  "values_principals": [
+    "Developer Productivity: Focus on enabling developers to work efficiently.",
+    "Usability: Provide intuitive and easy-to-use tools and environments.",
+    "Consistency: Ensure consistent development environments and processes.",
+    "Collaboration: Foster a collaborative development culture.",
+    "Continuous Improvement: Continuously improve the developer experience."
+  ],
+  "team_structure": [
+    {
+      "title": "Team Lead",
+      "responsibilities": "Oversee team operations, prioritize tasks, and ensure alignment with broader goals."
+    },
+    {
+      "title": "Developer Tools Engineer",
+      "responsibilities": "Develop and maintain development tools and environments."
+    },
+    {
+      "title": "CI/CD Engineer",
+      "responsibilities": "Integrate CI/CD tools and processes into development environments."
+    },
+    {
+      "title": "Developer Advocate",
+      "responsibilities": "Collect feedback from developers, advocate for their needs, and work on improving the developer experience."
+    },
+    {
+      "title": "Documentation Specialist",
+      "responsibilities": "Create and maintain comprehensive documentation and knowledge bases."
+    }
+  ],
+  "priorities": [
+    "Enhance and maintain development tools and environments.",
+    "Integrate CI/CD tools and processes seamlessly.",
+    "Collect and act on developer feedback to improve experiences.",
+    "Ensure consistent and intuitive development processes.",
+    "Foster collaboration among developers and teams."
+  ],
+  "communication_channels": [
+    {
+      "channel": "Slack",
+      "purpose": "Immediate communication and support requests."
+    },
+    {
+      "channel": "Email",
+      "purpose": "Formal communications and updates."
+    },
+    {
+      "channel": "Jira",
+      "purpose": "Task and project management."
+    },
+    {
+      "channel": "Confluence",
+      "purpose": "Documentation and knowledge sharing."
+    }
+  ],
+  "meeting_cadence": [
+    {
+      "meeting_type": "Daily Stand-up",
+      "frequency": "Daily",
+      "purpose": "Quick updates on progress, blockers, and plans for the day.",
+      "attendees": "All team members"
+    },
+    {
+      "meeting_type": "Sprint Planning",
+      "frequency": "Bi-weekly",
+      "purpose": "Plan the work for the upcoming sprint.",
+      "attendees": "Team Lead, Developer Tools Engineers, CI/CD Engineers"
+    },
+    {
+      "meeting_type": "Sprint Retrospective",
+      "frequency": "Bi-weekly",
+      "purpose": "Reflect on the past sprint and identify areas for improvement.",
+      "attendees": "All team members"
+    },
+    {
+      "meeting_type": "Weekly Sync",
+      "frequency": "Weekly",
+      "purpose": "Team coordination and updates on ongoing projects.",
+      "attendees": "All team members"
+    }
+  ],
+  "stakeholders": {
+    "core": [
+      "Development Teams",
+      "QA Teams"
+    ],
+    "supportive": [
+      "Cloud Foundation Team",
+      "Enablement Team",
+      "Deployment Team",
+      "Observability Team",
+      "Security Team"
+    ],
+    "peripheral": [
+      "Executive Leadership",
+      "External Partners"
+    ]
+  },
+  "performance_metrics": [
+    {
+      "objective": "Developer Satisfaction Scores",
+      "justification": "High satisfaction indicates an effective and positive developer experience.",
+      "measurement": "Quarterly satisfaction surveys.",
+      "inbound": "Survey tools (Google Forms, SurveyMonkey)",
+      "outbound": "Quarterly feedback summaries"
+    },
+    {
+      "objective": "Tool Adoption Rate",
+      "justification": "High adoption rates indicate that tools are useful and effective.",
+      "measurement": "Percentage of developers using provided tools.",
+      "inbound": "Usage logs and analytics",
+      "outbound": "Monthly adoption reports"
+    },
+    {
+      "objective": "Time to Onboard New Developers",
+      "justification": "Efficient onboarding reduces time to productivity for new hires.",
+      "measurement": "Average time from hire to full productivity.",
+      "inbound": "Onboarding logs and feedback",
+      "outbound": "Onboarding completion reports"
+    },
+    {
+      "objective": "CI/CD Pipeline Efficiency",
+      "justification": "Efficient CI/CD pipelines improve development productivity.",
+      "measurement": "Average build and deployment times.",
+      "inbound": "CI/CD pipeline logs",
+      "outbound": "Weekly efficiency reports"
+    }
+  ],
+  "service_level_agreements": [
+    {
+      "service": "Tool Support",
+      "SLA": "Initial response within 15 minutes, 90% of issues resolved within 4 hours."
+    },
+    {
+      "service": "Development Environment Setup",
+      "SLA": "Provision development environments within 1 business day."
+    },
+    {
+      "service": "CI/CD Pipeline Availability",
+      "SLA": "99.9% uptime for CI/CD pipelines."
+    }
+  ],
+  "contributing_repositories": [
+    "https://github.com/siriusxm/dev-tools",
+    "https://github.com/siriusxm/ci-cd-pipelines"
+  ],
+  "knowledge_bases": {
+    "user_guides": [
+      "https://confluence.siriusxm.com/display/DEV/Developer+Tools+Guide",
+      "https://confluence.siriusxm.com/display/DEV/CI-CD+User+Guide"
+    ],
+    "contribution_guides": [
+      "https://confluence.siriusxm.com/display/DEV/Contributing+to+Dev+Tools",
+      "https://confluence.siriusxm.com/display/DEV/CI-CD+Pipeline+Contribution+Guide"
+    ],
+    "design_documentation": [
+      "https://confluence.siriusxm.com/display/DEV/Development+Tools+Architecture",
+      "https://confluence.siriusxm.com/display/DEV/CI-CD+Pipeline+Design"
+    ],
+    "testing_documentation": [
+      "https://confluence.siriusxm.com/display/DEV/Testing+Standards",
+      "https://confluence.siriusxm.com/display/DEV/Test+Procedures"
+    ]
+  }
+}

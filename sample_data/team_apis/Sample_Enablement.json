@@ -1,0 +1,170 @@
+{
+    "team_name": "Enablement",
+    "topology_type": "Enablement",
+    "north_star": "Empower SiriusXM developers to achieve peak productivity by providing seamless support, streamlined onboarding, and continuous improvement of the developer experience.",
+    "mission": "To unblock and support development teams, ensuring they have the tools, knowledge, and resources needed to deliver high-quality software efficiently and effectively.",
+    "vision": "To create a world-class developer experience at SiriusXM where every developer can work efficiently, innovate freely, and deliver exceptional value with minimal friction.",
+    "values_principals": [
+        "Developer First: Always prioritize the needs and experiences of developers.",
+        "Unblock and Enable: Focus on removing obstacles and enabling productivity.",
+        "Continuous Improvement: Always seek ways to improve processes, tools, and support.",
+        "Collaboration: Foster a culture of open communication and teamwork.",
+        "Proactive Support: Anticipate and address issues before they become blockers."
+    ],
+    "team_structure": [
+        {
+            "title": "Team Lead",
+            "responsibilities": "Oversee team operations, prioritize tasks, and ensure alignment with broader goals."
+        },
+        {
+            "title": "Support Engineer",
+            "responsibilities": "Provide direct support to developers, resolve blockers, and handle support requests."
+        },
+        {
+            "title": "Onboarding Specialist",
+            "responsibilities": "Manage and improve the onboarding process for new developers and teams."
+        },
+        {
+            "title": "Developer Advocate",
+            "responsibilities": "Collect feedback from developers, advocate for their needs, and work on improving the developer experience."
+        },
+        {
+            "title": "Documentation Specialist",
+            "responsibilities": "Create and maintain comprehensive documentation and knowledge bases."
+        }
+    ],
+    "priorities": [
+        "Unblock development teams swiftly.",
+        "Streamline and enhance onboarding processes.",
+        "Continuously improve developer tools and documentation.",
+        "Foster a culture of open communication and collaboration.",
+        "Proactively support and anticipate developer needs."
+    ],
+    "communication_channels": [
+        {
+            "channel": "Slack",
+            "purpose": "Immediate communication and support requests."
+        },
+        {
+            "channel": "Email",
+            "purpose": "Formal communications and updates."
+        },
+        {
+            "channel": "Jira",
+            "purpose": "Task and project management."
+        },
+        {
+            "channel": "Confluence",
+            "purpose": "Documentation and knowledge sharing."
+        }
+    ],
+    "meeting_cadence": [
+        {
+            "meeting_type": "Daily Stand-up",
+            "frequency": "Daily",
+            "purpose": "Quick updates on progress, blockers, and plans for the day.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Sprint Planning",
+            "frequency": "Bi-weekly",
+            "purpose": "Plan the work for the upcoming sprint.",
+            "attendees": "Team Lead, Support Engineers, Onboarding Specialist"
+        },
+        {
+            "meeting_type": "Sprint Retrospective",
+            "frequency": "Bi-weekly",
+            "purpose": "Reflect on the past sprint and identify areas for improvement.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Weekly Sync",
+            "frequency": "Weekly",
+            "purpose": "Team coordination and updates on ongoing projects.",
+            "attendees": "All team members"
+        }
+    ],
+    "stakeholders": {
+        "core": [
+            "Development Teams",
+            "QA Teams"
+        ],
+        "supportive": [
+            "Cloud Foundation Team",
+            "Deployment Team",
+            "Observability Team",
+            "Security Team"
+        ],
+        "peripheral": [
+            "Executive Leadership",
+            "External Partners"
+        ]
+    },
+    "performance_metrics": [
+        {
+            "objective": "Time to Resolution for Blockers",
+            "justification": "Ensuring developers can work without delays is crucial for productivity.",
+            "measurement": "Average time taken to resolve blockers.",
+            "inbound": "Support ticket system (Jira, Slack)",
+            "outbound": "Weekly status reports"
+        },
+        {
+            "objective": "Response Time to Support Requests",
+            "justification": "Timely support is essential for maintaining developer satisfaction.",
+            "measurement": "Average initial response time to support requests.",
+            "inbound": "Support request logs (Slack, Jira)",
+            "outbound": "Monthly performance dashboards"
+        },
+        {
+            "objective": "Developer Satisfaction Scores",
+            "justification": "High satisfaction indicates effective support and a positive developer experience.",
+            "measurement": "Quarterly satisfaction surveys.",
+            "inbound": "Survey tools (Google Forms, SurveyMonkey)",
+            "outbound": "Quarterly feedback summaries"
+        },
+        {
+            "objective": "Time to Onboard New Developers and Teams",
+            "justification": "Efficient onboarding reduces time to productivity for new hires.",
+            "measurement": "Average time from hire to full productivity.",
+            "inbound": "Onboarding logs and feedback",
+            "outbound": "Onboarding completion reports"
+        }
+    ],
+    "service_level_agreements": [
+        {
+            "service": "Blocker Resolution",
+            "SLA": "95% of blockers resolved within 24 hours."
+        },
+        {
+            "service": "Support Request Response",
+            "SLA": "Initial response within 15 minutes, 90% of issues resolved within 4 hours."
+        },
+        {
+            "service": "Onboarding",
+            "SLA": "Complete onboarding within 2 business days for new developers."
+        }
+    ],
+    "contributing_repositories": [
+        "https://github.com/siriusxm/developer-tools",
+        "https://github.com/siriusxm/onboarding-scripts"
+    ],
+    "knowledge_bases": {
+        "user_guides": [
+            "https://confluence.siriusxm.com/display/DE/Onboarding+Guide",
+            "https://confluence.siriusxm.com/display/DE/Support+FAQ",
+            "https://confluence.siriusxm.com/display/DE/Developer+Tools+Guide"
+        ],
+        "contribution_guides": [
+            "https://confluence.siriusxm.com/display/DE/Contributing+to+Docs",
+            "https://confluence.siriusxm.com/display/DE/Support+Ticket+Guide"
+        ],
+        "design_documentation": [
+            "https://confluence.siriusxm.com/display/DE/Platform+Design",
+            "https://confluence.siriusxm.com/display/DE/Architecture+Overview"
+        ],
+        "testing_documentation": [
+            "https://confluence.siriusxm.com/display/DE/Testing+Standards",
+            "https://confluence.siriusxm.com/display/DE/Test+Procedures"
+        ]
+    }
+}

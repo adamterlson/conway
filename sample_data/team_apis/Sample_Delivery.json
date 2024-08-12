@@ -1,0 +1,175 @@
+{
+    "team_name": "Delivery",
+    "topology_type": "Platform",
+    "north_star": "Enable seamless, reliable, and efficient deployment of applications across SiriusXM, ensuring fast time-to-market and high-quality releases.",
+    "mission": "To provide robust, scalable, and user-friendly deployment pipelines that empower development teams to deliver software with confidence and speed.",
+    "vision": "To create a deployment platform that allows for continuous delivery and integration, minimizing downtime and maximizing productivity for development teams.",
+    "values_principals": [
+        "Reliability First: Ensure deployments are reliable and consistent.",
+        "Automation: Automate repetitive tasks to reduce errors and save time.",
+        "Speed and Efficiency: Optimize deployment processes for speed without compromising quality.",
+        "Security: Maintain high security standards in all deployment processes.",
+        "Transparency: Provide clear and accessible deployment metrics and logs."
+    ],
+    "team_structure": [
+        {
+            "title": "Team Lead",
+            "responsibilities": "Oversee team operations, prioritize tasks, and ensure alignment with broader goals."
+        },
+        {
+            "title": "DevOps Engineer",
+            "responsibilities": "Design, implement, and maintain CI/CD pipelines and deployment infrastructure."
+        },
+        {
+            "title": "Release Manager",
+            "responsibilities": "Coordinate and manage release schedules and deployment plans."
+        },
+        {
+            "title": "Security Engineer",
+            "responsibilities": "Ensure deployment processes meet security and compliance standards."
+        },
+        {
+            "title": "Site Reliability Engineer (SRE)",
+            "responsibilities": "Monitor and improve the reliability and performance of deployment processes."
+        }
+    ],
+    "priorities": [
+        "Develop and maintain robust CI/CD pipelines.",
+        "Ensure deployments are secure and compliant.",
+        "Optimize deployment processes for speed and reliability.",
+        "Provide clear and accessible deployment metrics and logs.",
+        "Coordinate and manage release schedules efficiently."
+    ],
+    "communication_channels": [
+        {
+            "channel": "Slack",
+            "purpose": "Immediate communication and support requests."
+        },
+        {
+            "channel": "Email",
+            "purpose": "Formal communications and updates."
+        },
+        {
+            "channel": "Jira",
+            "purpose": "Task and project management."
+        },
+        {
+            "channel": "Confluence",
+            "purpose": "Documentation and knowledge sharing."
+        }
+    ],
+    "meeting_cadence": [
+        {
+            "meeting_type": "Daily Stand-up",
+            "frequency": "Daily",
+            "purpose": "Quick updates on progress, blockers, and plans for the day.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Sprint Planning",
+            "frequency": "Bi-weekly",
+            "purpose": "Plan the work for the upcoming sprint.",
+            "attendees": "Team Lead, DevOps Engineers, Release Manager"
+        },
+        {
+            "meeting_type": "Sprint Retrospective",
+            "frequency": "Bi-weekly",
+            "purpose": "Reflect on the past sprint and identify areas for improvement.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Weekly Sync",
+            "frequency": "Weekly",
+            "purpose": "Team coordination and updates on ongoing projects.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Release Planning",
+            "frequency": "Weekly",
+            "purpose": "Coordinate and schedule upcoming releases.",
+            "attendees": "Release Manager, DevOps Engineers, QA Representatives"
+        }
+    ],
+    "stakeholders": {
+        "core": [
+            "Development Teams",
+            "QA Teams"
+        ],
+        "supportive": [
+            "Cloud Foundation Team",
+            "Enablement Team",
+            "Observability Team",
+            "Security Team"
+        ],
+        "peripheral": [
+            "Executive Leadership",
+            "External Partners"
+        ]
+    },
+    "performance_metrics": [
+        {
+            "objective": "Deployment Frequency",
+            "justification": "Higher deployment frequency indicates a more agile and responsive development process.",
+            "measurement": "Number of deployments per week.",
+            "inbound": "CI/CD pipeline logs",
+            "outbound": "Weekly deployment reports"
+        },
+        {
+            "objective": "Change Failure Rate",
+            "justification": "A lower change failure rate indicates more reliable deployments.",
+            "measurement": "Percentage of deployments causing failures in production.",
+            "inbound": "Deployment logs, incident reports",
+            "outbound": "Monthly reliability reports"
+        },
+        {
+            "objective": "Mean Time to Recovery (MTTR)",
+            "justification": "A lower MTTR indicates quicker recovery from deployment failures.",
+            "measurement": "Average time taken to recover from deployment failures.",
+            "inbound": "Incident management system",
+            "outbound": "Quarterly performance reviews"
+        },
+        {
+            "objective": "Lead Time for Changes",
+            "justification": "Shorter lead times indicate more efficient deployment processes.",
+            "measurement": "Time taken from code commit to production deployment.",
+            "inbound": "CI/CD pipeline logs",
+            "outbound": "Bi-weekly performance dashboards"
+        }
+    ],
+    "service_level_agreements": [
+        {
+            "service": "Deployment Execution",
+            "SLA": "99% of deployments executed without critical issues."
+        },
+        {
+            "service": "Support Response",
+            "SLA": "Initial response within 15 minutes for deployment-related issues, 90% of issues resolved within 2 hours."
+        },
+        {
+            "service": "Release Coordination",
+            "SLA": "All releases planned and communicated at least 48 hours in advance."
+        }
+    ],
+    "contributing_repositories": [
+        "https://github.com/siriusxm/deployment-pipelines",
+        "https://github.com/siriusxm/release-management"
+    ],
+    "knowledge_bases": {
+        "user_guides": [
+            "https://confluence.siriusxm.com/display/DEP/Deployment+User+Guide",
+            "https://confluence.siriusxm.com/display/DEP/Release+Management+Guide"
+        ],
+        "contribution_guides": [
+            "https://confluence.siriusxm.com/display/DEP/Contributing+to+Deployment+Pipelines",
+            "https://confluence.siriusxm.com/display/DEP/Release+Management+Contribution+Guide"
+        ],
+        "design_documentation": [
+            "https://confluence.siriusxm.com/display/DEP/Deployment+Architecture",
+            "https://confluence.siriusxm.com/display/DEP/CI-CD+Pipeline+Design"
+        ],
+        "testing_documentation": [
+            "https://confluence.siriusxm.com/display/DEP/Testing+Standards",
+            "https://confluence.siriusxm.com/display/DEP/Test+Procedures"
+        ]
+    }
+}

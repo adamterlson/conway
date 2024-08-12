@@ -1,0 +1,175 @@
+{
+    "team_name": "Self-Checkout",
+    "topology_type": "Stream-aligned",
+    "north_star": "Provide a seamless and efficient self-checkout experience for users through a robust mobile app and backend web components leveraging native cloud services.",
+    "mission": "To build and maintain the self-checkout product, ensuring it delivers a high-quality, user-friendly experience while utilizing scalable and secure cloud infrastructure.",
+    "vision": "To create a market-leading self-checkout solution that enhances customer satisfaction and operational efficiency through continuous innovation and seamless integration with cloud services.",
+    "values_principals": [
+        "User-Centric: Focus on delivering an exceptional user experience.",
+        "Innovation: Continuously innovate to improve the self-checkout process.",
+        "Scalability: Ensure the solution can scale to meet growing user demand.",
+        "Security: Prioritize the security of user data and transactions.",
+        "Collaboration: Foster strong collaboration with other teams to ensure seamless integration and support."
+    ],
+    "team_structure": [
+        {
+            "title": "Team Lead",
+            "responsibilities": "Oversee team operations, prioritize tasks, and ensure alignment with broader goals."
+        },
+        {
+            "title": "Mobile App Developer",
+            "responsibilities": "Develop and maintain the self-checkout mobile application."
+        },
+        {
+            "title": "Backend Developer",
+            "responsibilities": "Develop and maintain backend web components and services."
+        },
+        {
+            "title": "Cloud Engineer",
+            "responsibilities": "Ensure the backend services utilize scalable and secure cloud infrastructure."
+        },
+        {
+            "title": "QA Engineer",
+            "responsibilities": "Test the application to ensure functionality, performance, and security."
+        },
+        {
+            "title": "UI/UX Designer",
+            "responsibilities": "Design user interfaces that provide an intuitive and seamless checkout experience."
+        }
+    ],
+    "priorities": [
+        "Develop and maintain the self-checkout mobile application.",
+        "Ensure backend services are scalable and secure.",
+        "Integrate seamlessly with cloud infrastructure and services.",
+        "Continuously improve the user experience.",
+        "Ensure the solution meets security and compliance standards."
+    ],
+    "communication_channels": [
+        {
+            "channel": "Slack",
+            "purpose": "Immediate communication and support requests."
+        },
+        {
+            "channel": "Email",
+            "purpose": "Formal communications and updates."
+        },
+        {
+            "channel": "Jira",
+            "purpose": "Task and project management."
+        },
+        {
+            "channel": "Confluence",
+            "purpose": "Documentation and knowledge sharing."
+        }
+    ],
+    "meeting_cadence": [
+        {
+            "meeting_type": "Daily Stand-up",
+            "frequency": "Daily",
+            "purpose": "Quick updates on progress, blockers, and plans for the day.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Sprint Planning",
+            "frequency": "Bi-weekly",
+            "purpose": "Plan the work for the upcoming sprint.",
+            "attendees": "Team Lead, Developers, QA Engineer, UI/UX Designer"
+        },
+        {
+            "meeting_type": "Sprint Retrospective",
+            "frequency": "Bi-weekly",
+            "purpose": "Reflect on the past sprint and identify areas for improvement.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Weekly Sync",
+            "frequency": "Weekly",
+            "purpose": "Team coordination and updates on ongoing projects.",
+            "attendees": "All team members"
+        }
+    ],
+    "stakeholders": {
+        "core": [
+            "End Users",
+            "Product Management Team"
+        ],
+        "supportive": [
+            "Cloud Foundation Team",
+            "Enablement Team",
+            "Deployment Team",
+            "DevX Team",
+            "Observability Team"
+        ],
+        "peripheral": [
+            "Executive Leadership",
+            "Marketing Team",
+            "Customer Support Team"
+        ]
+    },
+    "performance_metrics": [
+        {
+            "objective": "User Satisfaction Score",
+            "justification": "High user satisfaction indicates a successful and user-friendly self-checkout experience.",
+            "measurement": "Average score from user satisfaction surveys.",
+            "inbound": "Survey tools (Google Forms, SurveyMonkey)",
+            "outbound": "Quarterly feedback reports"
+        },
+        {
+            "objective": "Transaction Success Rate",
+            "justification": "A high transaction success rate indicates a reliable and functional self-checkout process.",
+            "measurement": "Percentage of successful transactions.",
+            "inbound": "Transaction logs",
+            "outbound": "Monthly performance reports"
+        },
+        {
+            "objective": "System Uptime",
+            "justification": "High uptime ensures the self-checkout service is always available to users.",
+            "measurement": "Percentage of time the system is available.",
+            "inbound": "Monitoring tools",
+            "outbound": "Monthly uptime reports"
+        },
+        {
+            "objective": "Average Response Time",
+            "justification": "Fast response times ensure a smooth and efficient user experience.",
+            "measurement": "Average time taken to complete a transaction.",
+            "inbound": "System performance logs",
+            "outbound": "Weekly performance dashboards"
+        }
+    ],
+    "service_level_agreements": [
+        {
+            "service": "Self-Checkout Service Availability",
+            "SLA": "99.9% uptime for self-checkout services."
+        },
+        {
+            "service": "Issue Resolution",
+            "SLA": "Initial response within 15 minutes, 90% of issues resolved within 4 hours."
+        },
+        {
+            "service": "Transaction Processing",
+            "SLA": "99% of transactions processed within 2 seconds."
+        }
+    ],
+    "contributing_repositories": [
+        "https://github.com/siriusxm/self-checkout-mobile",
+        "https://github.com/siriusxm/self-checkout-backend"
+    ],
+    "knowledge_bases": {
+        "user_guides": [
+            "https://confluence.siriusxm.com/display/SC/Self-Checkout+User+Guide",
+            "https://confluence.siriusxm.com/display/SC/Mobile+App+Guide"
+        ],
+        "contribution_guides": [
+            "https://confluence.siriusxm.com/display/SC/Contributing+to+Self-Checkout+Mobile",
+            "https://confluence.siriusxm.com/display/SC/Contributing+to+Self-Checkout+Backend"
+        ],
+        "design_documentation": [
+            "https://confluence.siriusxm.com/display/SC/Self-Checkout+Architecture",
+            "https://confluence.siriusxm.com/display/SC/Backend+Service+Design"
+        ],
+        "testing_documentation": [
+            "https://confluence.siriusxm.com/display/SC/Testing+Standards",
+            "https://confluence.siriusxm.com/display/SC/Test+Procedures"
+        ]
+    }
+}

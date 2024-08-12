@@ -1,0 +1,177 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "type": "Platform",
+            "team_name": "Cloud Foundation",
+            "mission": "To build and maintain a solid cloud foundation that supports efficient, reliable, and secure application development and deployment across the organization."
+        },
+        {
+            "id": 2,
+            "type": "Enablement",
+            "team_name": "Enablement",
+            "mission": "To unblock and support development teams, ensuring they have the tools, knowledge, and resources needed to deliver high-quality software efficiently and effectively."
+        },
+        {
+            "id": 3,
+            "type": "Platform",
+            "team_name": "Deployment",
+            "mission": "To provide robust, scalable, and user-friendly deployment pipelines that empower development teams to deliver software with confidence and speed."
+        },
+        {
+            "id": 4,
+            "type": "Platform",
+            "team_name": "DevX",
+            "mission": "To enhance the developer experience by providing streamlined development environments, tools, and processes that facilitate efficient and productive software development."
+        },
+        {
+            "id": 5,
+            "type": "Platform",
+            "team_name": "Observability",
+            "mission": "To provide robust monitoring, logging, and alerting solutions that ensure system reliability, performance, and security across the SiriusXM ecosystem."
+        },
+        {
+            "id": 6,
+            "type": "Stream-aligned",
+            "team_name": "Self-Checkout",
+            "mission": "To build and maintain the self-checkout product, consisting of a mobile app and backend web components using native cloud services."
+        }
+    ],
+    "links": [
+        {
+            "source": 1,
+            "target": 2,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "High",
+                "purpose": "Provide infrastructure support"
+            }
+        },
+        {
+            "source": 1,
+            "target": 3,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "Medium",
+                "purpose": "Provide cloud resources"
+            }
+        },
+        {
+            "source": 1,
+            "target": 4,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "Medium",
+                "purpose": "Provide development environments"
+            }
+        },
+        {
+            "source": 1,
+            "target": 5,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "Medium",
+                "purpose": "Provide monitoring support"
+            }
+        },
+        {
+            "source": 1,
+            "target": 6,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "High",
+                "purpose": "Provide infrastructure and cloud services"
+            }
+        },
+        {
+            "source": 2,
+            "target": 3,
+            "value": {
+                "type": "Facilitating",
+                "bandwidth": "High",
+                "purpose": "Provide onboarding and support"
+            }
+        },
+        {
+            "source": 2,
+            "target": 4,
+            "value": {
+                "type": "Facilitating",
+                "bandwidth": "High",
+                "purpose": "Provide developer tools and support"
+            }
+        },
+        {
+            "source": 2,
+            "target": 5,
+            "value": {
+                "type": "Facilitating",
+                "bandwidth": "Medium",
+                "purpose": "Provide support insights"
+            }
+        },
+        {
+            "source": 2,
+            "target": 6,
+            "value": {
+                "type": "Facilitating",
+                "bandwidth": "High",
+                "purpose": "Provide onboarding and support"
+            }
+        },
+        {
+            "source": 3,
+            "target": 4,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "High",
+                "purpose": "Provide CI/CD pipeline support"
+            }
+        },
+        {
+            "source": 3,
+            "target": 5,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "Medium",
+                "purpose": "Provide deployment metrics"
+            }
+        },
+        {
+            "source": 3,
+            "target": 6,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "High",
+                "purpose": "Provide deployment pipelines"
+            }
+        },
+        {
+            "source": 4,
+            "target": 5,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "Medium",
+                "purpose": "Provide development metrics"
+            }
+        },
+        {
+            "source": 4,
+            "target": 6,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "High",
+                "purpose": "Provide development tools and support"
+            }
+        },
+        {
+            "source": 5,
+            "target": 6,
+            "value": {
+                "type": "X-as-a-Service",
+                "bandwidth": "Medium",
+                "purpose": "Provide monitoring and alerting"
+            }
+        }
+    ]
+}

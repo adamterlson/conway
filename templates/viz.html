@@ -1,51 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask MongoDB App</title>
+    <title>Force-Directed Graph</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            margin-top: 20px;
-        }
-        form {
-            margin-bottom: 20px;
-        }
-        input[type="text"] {
-            padding: 10px;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-        button {
-            padding: 10px 15px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background-color: white;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
         .link {
             stroke-opacity: 0.6;
@@ -73,11 +33,11 @@
     </style>
 </head>
 <body>
-    <h1>Item List</h1> 
     <svg width="960" height="600"></svg>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script>
-        const data = {{ graph|tojson|safe }};
+        const data = {{ data|tojson|safe }};
+
         const width = 960;
         const height = 600;
 
@@ -90,12 +50,12 @@
             .style("opacity", 0);
 
         const colorScale = d3.scaleOrdinal()
-            .domain(["Communication", "Stakeholder"])
+            .domain(["X-as-a-Service", "Facilitating"])
             .range(["green", "red"]);
 
         const bandwidthScale = d3.scaleOrdinal()
-            .domain(["Slack and Email", null])
-            .range([6, 3]);
+            .domain(["High", "Medium", "Low"])
+            .range([6, 3, 1]);
 
         const simulation = d3.forceSimulation(data.nodes)
             .force("link", d3.forceLink(data.links).id(d => d.id).distance(100))
@@ -107,8 +67,8 @@
             .selectAll("line")
             .data(data.links)
             .enter().append("line")
-            .attr("stroke-width", d => bandwidthScale(d.data.bandwidth))
-            .attr("stroke", d => colorScale(d.data.type));
+            .attr("stroke-width", d => bandwidthScale(d.value.bandwidth))
+            .attr("stroke", d => colorScale(d.value.type));
 
         const node = svg.append("g")
             .attr("class", "nodes")
@@ -119,7 +79,7 @@
         node.append("circle")
             .attr("r", 10)
             .attr("fill", d => {
-                switch(d.data.type) {
+                switch(d.type) {
                     case "Platform": return "blue";
                     case "Enablement": return "green";
                     case "Stream-aligned": return "orange";
@@ -130,7 +90,7 @@
                 tooltip.transition()
                     .duration(200)
                     .style("opacity", .9);
-                tooltip.html(`<strong>${d.data.team_name}</strong><br/>${d.data.mission}`)
+                tooltip.html(`<strong>${d.team_name}</strong><br/>${d.mission}`)
                     .style("left", (event.pageX) + "px")
                     .style("top", (event.pageY - 28) + "px");
             })
@@ -143,7 +103,7 @@
         node.append("text")
             .attr("x", 12)
             .attr("dy", ".35em")
-            .text(d => d.data.team_name);
+            .text(d => d.team_name);
 
         simulation.on("tick", () => {
             link
@@ -156,11 +116,5 @@
                 .attr("transform", d => `translate(${d.x},${d.y})`);
         });
     </script>
-    <a href="/create">Create New</a>
-    <ul>
-        {% for item in teams %}
-            <li>{{ item['team_name'] }}</li>
-        {% endfor %}
-    </ul>
 </body>
 </html>

@@ -1,0 +1,169 @@
+{
+    "team_name": "Observability",
+    "topology_type": "Platform",
+    "north_star": "Ensure comprehensive visibility into system performance, reliability, and health, enabling proactive management and rapid resolution of issues.",
+    "mission": "To provide robust monitoring, logging, and alerting solutions that ensure system reliability, performance, and security across the SiriusXM ecosystem.",
+    "vision": "To create an observability platform that delivers actionable insights and supports continuous improvement in system performance and reliability.",
+    "values_principals": [
+        "Visibility: Ensure comprehensive visibility into system performance and health.",
+        "Proactivity: Enable proactive issue detection and resolution.",
+        "Reliability: Support high availability and reliability of services.",
+        "Security: Maintain security and compliance in monitoring and logging.",
+        "Collaboration: Work closely with other teams to enhance observability."
+    ],
+    "team_structure": [
+        {
+            "title": "Team Lead",
+            "responsibilities": "Oversee team operations, prioritize tasks, and ensure alignment with broader goals."
+        },
+        {
+            "title": "Observability Engineer",
+            "responsibilities": "Develop and maintain monitoring, logging, and alerting solutions."
+        },
+        {
+            "title": "Site Reliability Engineer (SRE)",
+            "responsibilities": "Monitor and improve system reliability and performance."
+        },
+        {
+            "title": "Security Engineer",
+            "responsibilities": "Ensure observability solutions meet security and compliance standards."
+        },
+        {
+            "title": "Data Analyst",
+            "responsibilities": "Analyze observability data and provide actionable insights."
+        }
+    ],
+    "priorities": [
+        "Develop and maintain comprehensive monitoring and alerting solutions.",
+        "Ensure security and compliance in observability practices.",
+        "Provide actionable insights from observability data.",
+        "Support high availability and reliability of systems.",
+        "Collaborate with other teams to enhance observability."
+    ],
+    "communication_channels": [
+        {
+            "channel": "Slack",
+            "purpose": "Immediate communication and support requests."
+        },
+        {
+            "channel": "Email",
+            "purpose": "Formal communications and updates."
+        },
+        {
+            "channel": "Jira",
+            "purpose": "Task and project management."
+        },
+        {
+            "channel": "Confluence",
+            "purpose": "Documentation and knowledge sharing."
+        }
+    ],
+    "meeting_cadence": [
+        {
+            "meeting_type": "Daily Stand-up",
+            "frequency": "Daily",
+            "purpose": "Quick updates on progress, blockers, and plans for the day.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Sprint Planning",
+            "frequency": "Bi-weekly",
+            "purpose": "Plan the work for the upcoming sprint.",
+            "attendees": "Team Lead, Observability Engineers, SREs"
+        },
+        {
+            "meeting_type": "Sprint Retrospective",
+            "frequency": "Bi-weekly",
+            "purpose": "Reflect on the past sprint and identify areas for improvement.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Weekly Sync",
+            "frequency": "Weekly",
+            "purpose": "Team coordination and updates on ongoing projects.",
+            "attendees": "All team members"
+        }
+    ],
+    "stakeholders": {
+        "core": [
+            "Development Teams",
+            "QA Teams"
+        ],
+        "supportive": [
+            "Cloud Foundation Team",
+            "Enablement Team",
+            "Deployment Team",
+            "Security Team"
+        ],
+        "peripheral": [
+            "Executive Leadership",
+            "External Partners"
+        ]
+    },
+    "performance_metrics": [
+        {
+            "objective": "System Uptime",
+            "justification": "High uptime ensures reliability and availability of services.",
+            "measurement": "Percentage of time the system is available.",
+            "inbound": "Monitoring tools",
+            "outbound": "Monthly uptime reports"
+        },
+        {
+            "objective": "Mean Time to Detect (MTTD)",
+            "justification": "Quick detection of issues minimizes downtime and impact.",
+            "measurement": "Average time taken to detect issues.",
+            "inbound": "Monitoring and alerting systems",
+            "outbound": "Weekly detection reports"
+        },
+        {
+            "objective": "Mean Time to Resolve (MTTR)",
+            "justification": "Quick resolution of issues minimizes downtime and impact.",
+            "measurement": "Average time taken to resolve issues.",
+            "inbound": "Incident management system",
+            "outbound": "Weekly resolution reports"
+        },
+        {
+            "objective": "Alert Accuracy",
+            "justification": "Accurate alerts reduce noise and ensure focus on real issues.",
+            "measurement": "Percentage of alerts that are actionable and correct.",
+            "inbound": "Alerting system logs",
+            "outbound": "Monthly alert accuracy reports"
+        }
+    ],
+    "service_level_agreements": [
+        {
+            "service": "Monitoring and Alerting",
+            "SLA": "99.9% uptime for monitoring and alerting systems."
+        },
+        {
+            "service": "Issue Detection",
+            "SLA": "Detect 95% of issues within 5 minutes."
+        },
+        {
+            "service": "Issue Resolution Support",
+            "SLA": "Provide initial response within 15 minutes, 90% of issues resolved within 4 hours."
+        }
+    ],
+    "contributing_repositories": [
+        "https://github.com/siriusxm/observability-tools",
+        "https://github.com/siriusxm/monitoring-scripts"
+    ],
+    "knowledge_bases": {
+        "user_guides": [
+            "https://confluence.siriusxm.com/display/OBS/Observability+User+Guide",
+            "https://confluence.siriusxm.com/display/OBS/Monitoring+Tools+Guide"
+        ],
+        "contribution_guides": [
+            "https://confluence.siriusxm.com/display/OBS/Contributing+to+Observability+Tools",
+            "https://confluence.siriusxm.com/display/OBS/Monitoring+Scripts+Contribution+Guide"
+        ],
+        "design_documentation": [
+            "https://confluence.siriusxm.com/display/OBS/Observability+Architecture",
+            "https://confluence.siriusxm.com/display/OBS/Monitoring+System+Design"
+        ],
+        "testing_documentation": [
+            "https://confluence.siriusxm.com/display/OBS/Testing+Standards",
+            "https://confluence.siriusxm.com/display/OBS/Test+Procedures"
+        ]
+    }
+}

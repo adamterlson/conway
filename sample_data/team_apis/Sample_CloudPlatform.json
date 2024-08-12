@@ -1,4 +1,5 @@
 {
+    "team_name": "Cloud Platform",
     "topology_type": "Platform",
     "north_star": "To provide a robust, scalable, and secure cloud platform that empowers all development teams to innovate and deliver high-quality software efficiently.",
     "mission": "To design, build, and maintain a comprehensive cloud platform and supporting tools that enhance the productivity, security, and reliability of the organization's software development efforts.",

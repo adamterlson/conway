@@ -1,0 +1,172 @@
+{
+    "team_name": "Security and Risk",
+    "topology_type": "Enablement",
+    "north_star": "Ensure the security and integrity of all systems and data across the organization, mitigating risks and protecting the business from potential threats.",
+    "mission": "To provide expert security guidance, perform thorough risk assessments, and implement best practices to safeguard the company's assets and data.",
+    "vision": "To create a secure and resilient organization where security is integrated into every aspect of operations, ensuring business continuity and stakeholder trust.",
+    "values_principals": [
+        "Proactive Security: Anticipate and mitigate risks before they become threats.",
+        "Integrity: Ensure the integrity and confidentiality of data.",
+        "Collaboration: Work closely with all teams to integrate security best practices.",
+        "Continuous Improvement: Regularly update and improve security measures.",
+        "Transparency: Maintain clear and open communication regarding security policies and practices."
+    ],
+    "team_structure": [
+        {
+            "title": "Team Lead",
+            "responsibilities": "Oversee team operations, prioritize tasks, and ensure alignment with broader security goals."
+        },
+        {
+            "title": "Security Engineer",
+            "responsibilities": "Perform security assessments, develop security measures, and provide guidance on best practices."
+        },
+        {
+            "title": "Risk Analyst",
+            "responsibilities": "Identify and assess potential risks, and develop strategies to mitigate them."
+        },
+        {
+            "title": "Penetration Tester",
+            "responsibilities": "Conduct manual penetration testing upon request to identify vulnerabilities."
+        },
+        {
+            "title": "Security Consultant",
+            "responsibilities": "Provide consulting services to application owners and platform teams on security best practices."
+        }
+    ],
+    "priorities": [
+        "Perform manual penetration testing upon request.",
+        "Provide consulting on security best practices.",
+        "Develop and maintain security policies and procedures.",
+        "Conduct regular risk assessments and mitigation strategies.",
+        "Collaborate with all teams to ensure security is integrated into all operations."
+    ],
+    "communication_channels": [
+        {
+            "channel": "Slack",
+            "purpose": "Immediate communication and support requests."
+        },
+        {
+            "channel": "Email",
+            "purpose": "Formal communications and updates."
+        },
+        {
+            "channel": "Jira",
+            "purpose": "Task and project management."
+        },
+        {
+            "channel": "Confluence",
+            "purpose": "Documentation and knowledge sharing."
+        }
+    ],
+    "meeting_cadence": [
+        {
+            "meeting_type": "Daily Stand-up",
+            "frequency": "Daily",
+            "purpose": "Quick updates on progress, blockers, and plans for the day.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Weekly Security Review",
+            "frequency": "Weekly",
+            "purpose": "Review security incidents, assessments, and ongoing projects.",
+            "attendees": "All team members"
+        },
+        {
+            "meeting_type": "Bi-weekly Risk Assessment",
+            "frequency": "Bi-weekly",
+            "purpose": "Conduct risk assessments and update mitigation strategies.",
+            "attendees": "Team Lead, Security Engineers, Risk Analysts"
+        },
+        {
+            "meeting_type": "Monthly Consulting Sync",
+            "frequency": "Monthly",
+            "purpose": "Discuss consulting activities and feedback from application and platform teams.",
+            "attendees": "Security Consultants, Application Owners, Platform Team Representatives"
+        }
+    ],
+    "stakeholders": {
+        "core": [
+            "Application Teams",
+            "Platform Teams"
+        ],
+        "supportive": [
+            "Cloud Foundation Team",
+            "Enablement Team",
+            "Deployment Team",
+            "DevX Team",
+            "Observability Team",
+            "Self-Checkout Team"
+        ],
+        "peripheral": [
+            "Executive Leadership",
+            "Compliance Team",
+            "Legal Team"
+        ]
+    },
+    "performance_metrics": [
+        {
+            "objective": "Number of Vulnerabilities Identified",
+            "justification": "Identifying vulnerabilities helps to proactively address potential security issues.",
+            "measurement": "Count of vulnerabilities identified during penetration testing.",
+            "inbound": "Penetration testing reports",
+            "outbound": "Monthly vulnerability reports"
+        },
+        {
+            "objective": "Time to Resolve Security Issues",
+            "justification": "Quick resolution of security issues minimizes potential damage.",
+            "measurement": "Average time taken to resolve identified security issues.",
+            "inbound": "Issue tracking system (Jira)",
+            "outbound": "Weekly resolution reports"
+        },
+        {
+            "objective": "Compliance with Security Policies",
+            "justification": "Ensuring adherence to security policies is crucial for maintaining a secure environment.",
+            "measurement": "Percentage of teams compliant with security policies.",
+            "inbound": "Security audits",
+            "outbound": "Quarterly compliance reports"
+        },
+        {
+            "objective": "Risk Assessment Frequency",
+            "justification": "Regular risk assessments help in identifying and mitigating new risks.",
+            "measurement": "Number of risk assessments conducted.",
+            "inbound": "Risk assessment logs",
+            "outbound": "Bi-weekly assessment reports"
+        }
+    ],
+    "service_level_agreements": [
+        {
+            "service": "Penetration Testing",
+            "SLA": "Conduct manual penetration testing within 10 business days of request."
+        },
+        {
+            "service": "Issue Resolution",
+            "SLA": "Initial response within 1 hour, 90% of issues resolved within 2 business days."
+        },
+        {
+            "service": "Security Consulting",
+            "SLA": "Provide consulting feedback within 3 business days of request."
+        }
+    ],
+    "contributing_repositories": [
+        "https://github.com/siriusxm/security-policies",
+        "https://github.com/siriusxm/security-tools"
+    ],
+    "knowledge_bases": {
+        "user_guides": [
+            "https://confluence.siriusxm.com/display/SEC/Security+User+Guide",
+            "https://confluence.siriusxm.com/display/SEC/Penetration+Testing+Guide"
+        ],
+        "contribution_guides": [
+            "https://confluence.siriusxm.com/display/SEC/Contributing+to+Security+Policies",
+            "https://confluence.siriusxm.com/display/SEC/Security+Consulting+Guide"
+        ],
+        "design_documentation": [
+            "https://confluence.siriusxm.com/display/SEC/Security+Architecture",
+            "https://confluence.siriusxm.com/display/SEC/Risk+Mitigation+Design"
+        ],
+        "testing_documentation": [
+            "https://confluence.siriusxm.com/display/SEC/Testing+Standards",
+            "https://confluence.siriusxm.com/display/SEC/Test+Procedures"
+        ]
+    }
+}

@@ -1,0 +1,358 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "label": "Enablement",
+            "data": {
+                "type": "Enablement",
+                "team_name": "Enablement",
+                "mission": "To unblock and support development teams, ensuring they have the tools, knowledge, and resources needed to deliver high-quality software efficiently and effectively."
+            }
+        },
+        {
+            "id": 2,
+            "label": "Delivery",
+            "data": {
+                "type": "Platform",
+                "team_name": "Delivery",
+                "mission": "To provide robust, scalable, and user-friendly deployment pipelines that empower development teams to deliver software with confidence and speed."
+            }
+        },
+        {
+            "id": 3,
+            "label": "Observability",
+            "data": {
+                "type": "Platform",
+                "team_name": "Observability",
+                "mission": "To provide robust monitoring, logging, and alerting solutions that ensure system reliability, performance, and security across the SiriusXM ecosystem."
+            }
+        },
+        {
+            "id": 4,
+            "label": "Security and Risk",
+            "data": {
+                "type": "Enablement",
+                "team_name": "Security and Risk",
+                "mission": "To provide expert security guidance, perform thorough risk assessments, and implement best practices to safeguard the company's assets and data."
+            }
+        },
+        {
+            "id": 5,
+            "label": "Cloud Platform",
+            "data": {
+                "type": "Platform",
+                "team_name": "Cloud Platform",
+                "mission": "To design, build, and maintain a comprehensive cloud platform and supporting tools that enhance the productivity, security, and reliability of the organization's software development efforts."
+            }
+        },
+        {
+            "id": 6,
+            "label": "Self-Checkout",
+            "data": {
+                "type": "Stream-aligned",
+                "team_name": "Self-Checkout",
+                "mission": "To build and maintain the self-checkout product, ensuring it delivers a high-quality, user-friendly experience while utilizing scalable and secure cloud infrastructure."
+            }
+        },
+        {
+            "id": 7,
+            "label": "Cloud Foundation",
+            "data": {
+                "type": "Platform",
+                "team_name": "Cloud Foundation",
+                "mission": "To build and maintain a solid cloud foundation that supports efficient, reliable, and secure application development and deployment across the organization."
+            }
+        },
+        {
+            "id": 8,
+            "label": "DevX",
+            "data": {
+                "type": "Platform",
+                "team_name": "DevX",
+                "mission": "To enhance the developer experience by providing streamlined development environments, tools, and processes that facilitate efficient and productive software development."
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": 1,
+            "target": 2,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 2,
+            "target": 1,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 1,
+            "target": 3,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 3,
+            "target": 1,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 1,
+            "target": 4,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 4,
+            "target": 1,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 1,
+            "target": 5,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 5,
+            "target": 1,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 1,
+            "target": 8,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 8,
+            "target": 1,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 2,
+            "target": 3,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 3,
+            "target": 2,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 2,
+            "target": 4,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 4,
+            "target": 2,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 2,
+            "target": 7,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 7,
+            "target": 2,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 3,
+            "target": 4,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 4,
+            "target": 3,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 3,
+            "target": 7,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 7,
+            "target": 3,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 4,
+            "target": 7,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 7,
+            "target": 4,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 5,
+            "target": 7,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 7,
+            "target": 5,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 6,
+            "target": 7,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 7,
+            "target": 6,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        },
+        {
+            "source": 8,
+            "target": 7,
+            "label": "Communication",
+            "data": {
+                "type": "Communication Channel",
+                "bandwidth": "High",
+                "purpose": "Immediate communication and support requests (Slack)."
+            }
+        },
+        {
+            "source": 7,
+            "target": 8,
+            "label": "Stakeholder",
+            "data": {
+                "type": "Stakeholder",
+                "bandwidth": "Supportive",
+                "purpose": "Supportive Team"
+            }
+        }
+    ]
+}

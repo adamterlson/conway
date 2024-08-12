@@ -15,7 +15,7 @@ client = OpenAI()
 
 
 app = Flask(__name__)
-app.register_blueprint(teams_bp, url_prefix='/teamapi')
+app.register_blueprint(teams_bp, url_prefix='/teams')
 app.register_blueprint(grade_bp, url_prefix='/grade')
 app.client = client
 
@@ -68,6 +68,12 @@ def cached_writer_completion(prompt):
 @app.route('/')
 def index():
     return render_template('start.html')
+
+@app.route('/viz')
+def viz():
+    with open('sample_data/organization2.json') as f:
+        data = json.load(f)
+    return render_template('viz.html', data=data)
 
 @app.route('/submit', methods=['POST'])
 def submit():
