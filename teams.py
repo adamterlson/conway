@@ -49,7 +49,7 @@ def index():
     teams = load_json_files(directory)
     graph = cached_integration_completion(teams)
     print(graph)
-    return render_template('index.html', teams=teams, graph=graph)
+    return render_template('viz2.html', teams=teams, graph=graph)
 
 @teams_bp.route('/add', methods=['POST'])
 def add_item():

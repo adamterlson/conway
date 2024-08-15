@@ -1,2 +1,7 @@
 *.ipynb_*
 *.ipynb
+Dockerfile
+.devcontainer
+.venv
+.cache
+__pycache__

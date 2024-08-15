@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<div id="myplot"></div>
+<script type="module">
+
+import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+
+const matrix = [
+["Enablement", "Collaboration", "Collaboration"], // Transitions from Enablement
+["Here", "Observability", "Test"], // Transitions from Observability
+[1, 2, 0],  // Transitions from Self-Checkout
+[,"something","something2"]  // Transitions from TeamX
+];
+const nodes = matrix.map((m, i) => d3.pointRadial(((2 - i) * 2 * Math.PI) / matrix.length, 100))
+const edges = matrix.flatMap((m, i) => m.map((value, j) => ([nodes[i], nodes[j], value])))
+
+const plot = Plot.plot({
+inset: 60,
+aspectRatio: 1,
+axis: null,
+marks: [
+Plot.dot(nodes, {r: 40}),
+Plot.arrow(edges, {
+  x1: ([[x1]]) => x1,
+  y1: ([[, y1]]) => y1,
+  x2: ([, [x2]]) => x2,
+  y2: ([, [, y2]]) => y2,
+  bend: true,
+  strokeWidth: ([,, value]) => value,
+  strokeLinejoin: "miter",
+  headLength: 24,
+  inset: 48,
+}),
+Plot.text(nodes, {text: ["Enablement", "Observability", "Self-Checkout", "TeamX"], dy: 12}),
+Plot.text(edges, {
+  x: ([[x1, y1], [x2, y2]]) => (x1 + x2) / 2 + (y1 - y2) * 0.15,
+  y: ([[x1, y1], [x2, y2]]) => (y1 + y2) / 2 - (x1 - x2) * 0.15,
+  text: ([a,b, value]) => value
+})
+]
+})
+
+const div = document.querySelector("#myplot");
+div.append(plot);
+
+</script>
