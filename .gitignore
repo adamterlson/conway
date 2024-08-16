@@ -4,5 +4,7 @@ Dockerfile
 .devcontainer
 .venv
 .cache
-__pycache__
+**/__pycache__
 .DS_STORE
+.github
+*.code-workspace

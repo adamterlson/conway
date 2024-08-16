@@ -13,7 +13,7 @@ Perform the following steps
 7. **Priorities**: List prioritized deliverables, e.g. features, guides, services, tools, and patterns.
 8. **Communication Channels**:
    - **Digital Channels**: List the primary digital communication channels used by the team (e.g., Slack, email, jira) and their purposes.
-   - **Meeting Cadence**: Define the frequency, purpose, and attendees (team assignment and role) of regular meetings, such as daily stand-ups, sprint planning, retrospectives, etc.
+9. **Meetings Hosted**: Define the frequency, purpose, and attendees meetings scheduled by this team. Meetings can be internal or external.
 9. **Stakeholders**:
    - **Core Stakeholders**: List of individuals or teams with a direct impact and stake in the work of the team.
    - **Supportive Stakeholders**: List of individuals or teams that influence or support the team's initiatives.
@@ -23,7 +23,6 @@ Perform the following steps
    - **Justification**: The justification for the objective.
    - **Measurement**: How to objectively track progress for the objective.
    - **Inbound**: Where the data to measure will come from.
-   - **Outbound**: How the data will be shared with others.
 11. **Service Level Agreements (SLAs)**: Establish SLAs for key services provided by the team.
 12. **Contributing Repositories**: List of artifact repositories contributed directly. Must be a list of URLs.
 13. **Knowledge Bases**:

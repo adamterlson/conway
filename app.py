@@ -73,6 +73,7 @@ def index():
 def viz():
     with open('sample_data/organization2.json') as f:
         data = json.load(f)
+        
     return render_template('viz.html', data=data)
 
 @app.route('/submit', methods=['POST'])
