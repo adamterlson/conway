@@ -58,30 +58,36 @@
             "purpose": "Documentation and knowledge sharing."
         }
     ],
-    "meeting_cadence": [
+    "hosted_meetings": [
         {
             "meeting_type": "Daily Stand-up",
             "frequency": "Daily",
             "purpose": "Quick updates on progress, blockers, and plans for the day.",
-            "attendees": "All team members"
+            "attendees": "Observability team members"
         },
         {
             "meeting_type": "Sprint Planning",
             "frequency": "Bi-weekly",
             "purpose": "Plan the work for the upcoming sprint.",
-            "attendees": "Team Lead, Observability Engineers, SREs"
+            "attendees": "Observability team members"
         },
         {
             "meeting_type": "Sprint Retrospective",
             "frequency": "Bi-weekly",
             "purpose": "Reflect on the past sprint and identify areas for improvement.",
-            "attendees": "All team members"
+            "attendees": "Observability team members"
         },
         {
             "meeting_type": "Cloud Platform Weekly Sync",
             "frequency": "Weekly",
             "purpose": "Team coordination and updates for the Cloud Platform teams.",
-            "attendees": "Cloud Platform team members"
+            "attendees": "All team members in Cloud Platform"
+        },
+        {
+            "meeting_type": "Observability Lessons and Feedback",
+            "frequency": "Monthly",
+            "purpose": "Gather lessons learned from customers and better shape the future of our product",
+            "attendees": "Other members of Cloud Platform, customer teams leveraging our services"
         }
     ],
     "stakeholders": {

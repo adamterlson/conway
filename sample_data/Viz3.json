@@ -32,62 +32,44 @@
         {
             "source": 1,
             "target": 3,
-            "type": "Collaboration",
-            "data": "Enablement team is supporting Self-Checkout team's development workflows"
+            "type": "Producing",
+            "data": "Development workflows"
         },
         {
             "source": 1,
             "target": 3,
-            "type": "X-as-a-Service",
-            "data": "Enablement team is producing developer guides used by Self-Checkout team's engineers."
+            "type": "Producing",
+            "data": "Developer guides"
         },
         {
             "source": 2,
             "target": 3,
-            "type": "X-as-a-Service",
-            "data": "Observability team provides dashboards used as input to Self-Checkout's dashboards."
+            "type": "Producing",
+            "data": "Performance metrics"
         },
         {
             "source": 2,
             "target": 3,
-            "type": "Collaboration",
-            "data": "Observability team collaborates with Self-Checkout team to improve system monitoring."
+            "type": "Supporting",
+            "data": "System monitoring"
         },
         {
             "source": 1,
             "target": 2,
-            "type": "Collaboration",
-            "data": "Enablement team collaborates with Observability team to develop best practices for monitoring tools."
-        },
-        {
-            "source": 1,
-            "target": 3,
-            "type": "X-as-a-Service",
-            "data": "Self-Checkout uses knowledge bases maintained by Enablement team for development support."
-        },
-        {
-            "source": 3,
-            "target": 2,
-            "type": "X-as-a-Service",
-            "data": "Self-Checkout team consumes input data from Observability service level agreements for performance metrics."
-        },
-        {
-            "source": 1,
-            "target": 2,
-            "type": "Collaboration",
-            "data": "Both Enablement and Observability teams attend weekly sync meetings."
+            "type": "Producing",
+            "data": "Attends hosted meeting."
         },
         {
             "source": 3,
             "target": 1,
-            "type": "Collaboration",
-            "data": "Both Self-Checkout and Enablement teams attend daily stand-up meetings."
+            "type": "Supporting",
+            "data": "Attends hosted meeting."
         },
         {
             "source": 3,
             "target": 2,
-            "type": "Collaboration",
-            "data": "Both Self-Checkout and Observability teams attend bi-weekly sprint planning meetings."
+            "type": "Supporting",
+            "data": "Attends hosted meeting."
         }
     ]
 }

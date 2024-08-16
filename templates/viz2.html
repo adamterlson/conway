@@ -5,12 +5,36 @@
 import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-const matrix = [
-["Enablement", "Collaboration", "Collaboration"], // Transitions from Enablement
-["Here", "Observability", "Test"], // Transitions from Observability
-[1, 2, 0],  // Transitions from Self-Checkout
-[,"something","something2"]  // Transitions from TeamX
-];
+// const matrix = [
+// [, "1", "1", "1"], // Transitions from Enablement
+// ["4", , "5", "6"], // Transitions from Observability
+// [1, 2, 0],  // Transitions from Self-Checkout
+// [,"something","something2"]  // Transitions from TeamX
+// ];
+function createMatrix(data) {
+    const { nodes, links } = data;
+    const n = nodes.length;
+    // Initialize an n x n matrix with zeros
+    const matrix = Array.from({ length: n }, () => Array(n).fill(0));
+  const foo = []
+  foo.findIndex(node => node.id = link.source)
+  
+    // Populate the matrix based on the links
+    links.forEach(link => {
+        const sourceIndex = nodes.findIndex(node => node.id === link.source)
+        const targetIndex = nodes.findIndex(node => node.id === link.target)
+        // Assuming a simple weight of 1 for any connection.
+        // This can be modified to use different weights if needed.
+        console.log(sourceIndex, targetIndex)
+        matrix[sourceIndex][targetIndex] = !!matrix[sourceIndex][targetIndex] ? matrix[sourceIndex][targetIndex] + "\n" + link.data : link.data;
+        // matrix[targetIndex][sourceIndex] = 1; // If you want an undirected graph
+    });
+
+    return matrix;
+}
+const data = {{ graph|tojson|safe }};
+const matrix = createMatrix(data)
+
 const nodes = matrix.map((m, i) => d3.pointRadial(((2 - i) * 2 * Math.PI) / matrix.length, 100))
 const edges = matrix.flatMap((m, i) => m.map((value, j) => ([nodes[i], nodes[j], value])))
 
@@ -26,12 +50,12 @@ Plot.arrow(edges, {
   x2: ([, [x2]]) => x2,
   y2: ([, [, y2]]) => y2,
   bend: true,
-  strokeWidth: ([,, value]) => value,
+  strokeWidth: ([,, value]) => value.type === ,
   strokeLinejoin: "miter",
   headLength: 24,
   inset: 48,
 }),
-Plot.text(nodes, {text: ["Enablement", "Observability", "Self-Checkout", "TeamX"], dy: 12}),
+Plot.text(nodes, {text: data.nodes.map(node => node.label), dy: 12}),
 Plot.text(edges, {
   x: ([[x1, y1], [x2, y2]]) => (x1 + x2) / 2 + (y1 - y2) * 0.15,
   y: ([[x1, y1], [x2, y2]]) => (y1 + y2) / 2 - (x1 - x2) * 0.15,
