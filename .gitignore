@@ -1,10 +1,6 @@
 *.ipynb_*
 *.ipynb
 Dockerfile
-.devcontainer
-.venv
-.cache
 **/__pycache__
-.DS_STORE
-.github
+.*
 *.code-workspace

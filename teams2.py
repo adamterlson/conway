@@ -41,23 +41,6 @@ Your Team Charter / Team API is:
         llm_config=llm_config,
     )
 
-def create_chat_for_agent(agent):
-    return {
-        "sender": onboarding_personal_information_agent,
-        "recipient": customer_proxy_agent,
-        "message": 
-            "Hello, I'm here to help you get started with our product."
-            "Could you tell me your name and location?",
-        "summary_method": "reflection_with_llm",
-        "summary_args": {
-            "summary_prompt" : "Return the customer information "
-                             "into as JSON object only: "
-                             "{'name': '', 'location': ''}",
-        },
-        "max_turns": 2,
-        "clear_history" : True
-    },
-
 def cached_integration_completion():
     directory = 'sample_data/team_apis'
     teams = load_json_files(directory)
@@ -78,22 +61,15 @@ def cached_integration_completion():
         system_message="You are a report writer. Your job is to combine every tangible artifact each supporting team is delivering into a single report for the customer team. Create a python script that will write a JSON file containing a unified list of all artifacts provided by the other teams.",
         description="Provides a report summarizing the outputs delivered by other agents."
     )
-    agents=[user_proxy, *teamAgents, writer]
-    chats = [create_chat_for_agent(agent) for agent in agents]
-    print(len([user_proxy, *teamAgents, writer]))
-    # groupchat = autogen.GroupChat(
-    #     agents=[user_proxy, *teamAgents, writer],
-    #     messages=[],
-    #     max_round=10,
-    #     allowed_or_disallowed_speaker_transitions={
-    #         user_proxy: [*teamAgents, writer],
-    #         engineer: [user_proxy, executor],
-    #         writer: [user_proxy],
-    #     },
-    # )
-    # manager = autogen.GroupChatManager(
-    #     groupchat=groupchat, llm_config=llm_config
-    # )
+
+    groupchat = autogen.GroupChat(
+        agents=[user_proxy, *teamAgents, writer],
+        messages=[],
+        max_round=10,
+    )
+    manager = autogen.GroupChatManager(
+        groupchat=groupchat, llm_config=llm_config
+    )
     
     task = "I am building self-checkout for Best Buy. How will you help me in this mission?"
     groupchat_result = user_proxy.initiate_chat(
