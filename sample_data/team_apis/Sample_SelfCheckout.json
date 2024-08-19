@@ -1,4 +1,5 @@
 {
+    "team_id": 6,
     "team_name": "Self-Checkout",
     "topology_type": "Stream-aligned",
     "north_star": "Provide a seamless and efficient self-checkout experience for users through a robust mobile app and backend web components leveraging native cloud services.",

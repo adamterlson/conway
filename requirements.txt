@@ -1,0 +1,5 @@
+flask
+openai
+flask_caching
+pymongo
+pyautogen

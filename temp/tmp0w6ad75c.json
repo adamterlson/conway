@@ -1,0 +1,26 @@
+[
+    {
+        "source": 4,
+        "target": 6,
+        "type": "Documentation",
+        "data": "Technical Documentation for Self-Checkout Systems"
+    },
+    {
+        "source": 4,
+        "target": 6,
+        "type": "Best Practices and Standards",
+        "data": "Coding Standards for Checkout Systems"
+    },
+    {
+        "source": 4,
+        "target": 6,
+        "type": "Testing Artifacts",
+        "data": "Automated Test Suites for Self-Checkout Functionality"
+    },
+    {
+        "source": 4,
+        "target": 6,
+        "type": "Process Artifacts",
+        "data": "User Stories and Backlogs for Self-Checkout Features"
+    }
+]
