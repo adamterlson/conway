@@ -9,10 +9,7 @@ from pymongo import MongoClient
 from teams import teams_bp
 from grade import grade_bp
 
-
-
 client = OpenAI()
-
 
 app = Flask(__name__)
 app.register_blueprint(teams_bp, url_prefix='/teams')
@@ -86,3 +83,4 @@ def submit():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
