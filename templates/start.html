@@ -152,65 +152,99 @@ The marketing team's purpose is to help people find our company by educating and
       <p>The North Star is a singular, long-term goal or metric that guides and aligns a team's efforts. It provides a clear, enduring focus for the entire team.</p>
       <textarea type="text" id="northStar" name="northStar">{{ north_star }}</textarea>
       <a href="javascript:void(0);" id="runQualityCheck">Run Quality Check</a>
-      <div class="grade" id="northStarGrade"></div>
-      <br /><br />
+      <div class="grade" id="northStarGrade"></div><br /><br />
       <label for="mission">Mission</label>
       <textarea id="mission" name="mission">{{ mission }}</textarea><br /><br />
+      <label for="vision">Vision</label>
+      <textarea id="vision" name="vision">{{ vision }}</textarea><br /><br />
+      <label for="values_principals">Values/Principals Statements</label>
+      <textarea id="values_principals" name="values_principals">{{ '\n'.join(values_principals) }}</textarea><br /><br />
     </div>
     <div class="step">
-      <h1>Interactions</h1>
-      <p>
-        Modes of interaction with other teams, including collaboration and
-        service dependencies.
-      </p>
-      <h2>Stakeholders</h2>
-
-      {% for key, value in stakeholders.items() %}
-        <label for="stakeholder-{{ loop.index }}">{{ key | capitalize }} Stakeholders</label>
-        <p>{{value.description}}</p>
-        <textarea id="stakeholder-{{ loop.index }}" name="stakeholder-{{ loop.index }}">{{ value.value }}</textarea><br /><br />
+      <h1>Team Structure</h1>
+      <p>Definition of the word "Team": Everyone needed to get the job done.</p>
+      <h2>Member Roles</h2>
+      {% for role in team_structure %}
+        <label for="title-{{ loop.index }}">Title</label>
+        <input type="text" name="title-{{ loop.index }}" value="{{role.title}}" />
+        <textarea id="responsibilities-{{ loop.index }}" name="responsibilities-{{ loop.index }}">{{ role.responsibilities }}</textarea><br /><br />
       {% endfor %}
+      <h2>Stakeholders</h2>
+      <label for="stakeholders_core">Core</label>
+      <textarea id="stakeholders_core" name="stakeholders_core">{{ '\n'.join(stakeholders.core) }}</textarea><br /><br />
+      <label for="stakeholders_supportive">Supportive</label>
+      <textarea id="stakeholders_supportive" name="stakeholders_supportive">{{ '\n'.join(stakeholders.supportive) }}</textarea><br /><br />
+      <label for="stakeholders_peripheral">Peripheral</label>
+      <textarea id="stakeholders_peripheral" name="stakeholders_peripheral">{{ '\n'.join(stakeholders.peripheral) }}</textarea><br /><br />
     </div>
     <div class="step">
       <h1>Responsibilities</h1>
-      <p>
-        The primary duties, objectives, and deliverables expected from the
-        team.
-      </p>
-      <h2>KPIs</h2>
-
-      {% for kpi in kpis %}
+      <label for="priorities">Priorities</label>
+      <textarea id="priorities" name="priorities">{{ '\n'.join(priorities) }}</textarea><br /><br />
+      
+      <h2>Performance Metrics</h2>
+      {% for performance_metric in performance_metrics %}
       <fieldset>
         <legend>KPI {{ loop.index }}</legend>
         <div class="form-group">
           <label for="objective-{{ loop.index }}">Objective</label>
-          <textarea id="objective-{{ loop.index }}" name="objective-{{ loop.index }}">{{ kpi.objective }}</textarea>
-        </div>
-        <div class="form-group">
-          <label for="justification-{{ loop.index }}">Justification</label>
-          <textarea id="justification-{{ loop.index }}" name="justification-{{ loop.index }}">{{ kpi.justification }}</textarea>
+          <textarea id="objective-{{ loop.index }}" name="objective-{{ loop.index }}">{{ performance_metric.objective }}</textarea>
         </div>
         <div class="form-group">
           <label for="measurement-{{ loop.index }}">Measurement</label>
-          <textarea id="measurement-{{ loop.index }}" name="measurement-{{ loop.index }}">{{ kpi.measurement }}</textarea>
+          <textarea id="measurement-{{ loop.index }}" name="measurement-{{ loop.index }}">{{ performance_metric.measurement }}</textarea>
         </div>
         <div class="form-group">
-          <label for="inbound-{{ loop.index }}">Inbound</label>
-          <textarea id="inbound-{{ loop.index }}" name="inbound-{{ loop.index }}">{{ kpi.inbound }}</textarea>
-        </div>
-        <div class="form-group">
-          <label for="outbound-{{ loop.index }}">Outbound</label>
-          <textarea id="outbound-{{ loop.index }}" name="outbound-{{ loop.index }}">{{ kpi.outbound }}</textarea>
+          <label for="data_source-{{ loop.index }}">Data Source</label>
+          <textarea id="data_source-{{ loop.index }}" name="data_source-{{ loop.index }}">{{ performance_metric.data_source }}</textarea>
         </div>
       </fieldset>
       {% endfor %}
     </div>
-
     <div class="step">
-      <h1>Artifacts</h1>
-      <p>
-        The outputs, documents, and tools produced and maintained by the team.
-      </p>
+      <h1>Deliverables</h1>
+      {% for sla in service_level_agreements %}
+      <fieldset>
+        <legend>Service {{ loop.index }}</legend>
+        <div class="form-group">
+          <label for="service-{{ loop.index }}">{{sla.service}}</label>
+          <textarea id="service-{{ loop.index }}" name="service-{{ loop.index }}">{{ sla.service }}</textarea>
+        </div>
+        <div class="form-group">
+          <label for="sla-{{ loop.index }}">{{sla.sla}}</label>
+          <textarea id="sla-{{ loop.index }}" name="sla-{{ loop.index }}">{{ sla.sla }}</textarea>
+        </div>
+      </fieldset>
+      {% endfor %}
+      <label for="contributing_repositories">Contributing Respositories</label>
+      <textarea id="contributing_repositories" name="contributing_repositories">{{ '\n'.join(contributing_repositories) }}</textarea><br /><br />
+
+    </div>
+    <div class="step">
+      <h1>Communication Patterns</h1>
+      <p>The outputs, documents, and tools produced and maintained by the team.</p>
+      <h2>Communication Channels</h2>
+      {% for channel in communication_channels %}
+      <label for="channel-{{ loop.index }}">{{ channel.channel }}</label>
+      <textarea id="channel-{{ loop.index }}" name="channel-{{ loop.index }}">{{ channel.purpose }}</textarea><br /><br />
+      {% endfor %}
+      <h2>Routines</h2>
+      {% for routine in routines %}
+      <label for="routine-{{ loop.index }}">Routine {{ loop.index }}</label>
+      <p>Frequency: {{ routine.frequency }}</p>
+      <textarea id="routine-{{ loop.index }}" name="routine-{{ loop.index }}">{{ routine.purpose }}</textarea><br /><br />
+      {% endfor %}
+    </div>
+    <div class="step">
+      <h1>Knowledge Bases</h1>
+      <h2>User Guides</h2>
+      <textarea id="user_guides" name="user_guides">{{ '\n'.join(knowledge_bases.user_guides) }}</textarea><br /><br />
+      <h2>Contribution Guides</h2>
+      <textarea id="contribution_guides" name="contribution_guides">{{ '\n'.join(knowledge_bases.contribution_guides) }}</textarea><br /><br />
+      <h2>Design Guides</h2>
+      <textarea id="design_guides" name="design_guides">{{ '\n'.join(knowledge_bases.design_guides) }}</textarea><br /><br />
+      <h2>Testing Guides</h2>
+      <textarea id="testing_guides" name="testing_guides">{{ '\n'.join(knowledge_bases.testing_guides) }}</textarea><br /><br />
     </div>
     <!-- Navigation Buttons -->
     <div class="navigation">

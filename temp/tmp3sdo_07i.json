@@ -1,0 +1,95 @@
+[
+    {
+        "source": 3,
+        "target": 6,
+        "type": "Tools and Frameworks",
+        "data": "Custom-built tools for CI/CD"
+    },
+    {
+        "source": 1,
+        "target": 6,
+        "type": "Code Artifacts",
+        "data": "APIs for payment processing and inventory management"
+    },
+    {
+        "source": 4,
+        "target": 6,
+        "type": "Best Practices and Standards",
+        "data": "Coding Standards for POS systems"
+    },
+    {
+        "source": 2,
+        "target": 6,
+        "type": "Documentation",
+        "data": "Technical Documentation for self-checkout integration"
+    },
+    {
+        "source": 6,
+        "target": 1,
+        "type": "Process Artifacts",
+        "data": "User Stories and Backlogs for self-checkout features"
+    },
+    {
+        "source": 3,
+        "target": 6,
+        "type": "Tools and Frameworks",
+        "data": "Custom-built tools for CI/CD"
+    },
+    {
+        "source": 1,
+        "target": 6,
+        "type": "Code Artifacts",
+        "data": "APIs for payment processing and inventory management"
+    },
+    {
+        "source": 4,
+        "target": 6,
+        "type": "Best Practices and Standards",
+        "data": "Coding Standards for POS systems"
+    },
+    {
+        "source": 2,
+        "target": 6,
+        "type": "Documentation",
+        "data": "Technical Documentation for self-checkout integration"
+    },
+    {
+        "source": 6,
+        "target": 1,
+        "type": "Process Artifacts",
+        "data": "User Stories and Backlogs for self-checkout features"
+    },
+    {
+        "source": 3,
+        "target": 6,
+        "type": "Tools and Frameworks",
+        "data": "Custom-built tools for CI/CD"
+    },
+    {
+        "source": 1,
+        "target": 6,
+        "type": "Code Artifacts",
+        "data": "APIs for payment processing and inventory management"
+    },
+    {
+        "source": 4,
+        "target": 6,
+        "type": "Best Practices and Standards",
+        "data": "Coding Standards for POS systems"
+    },
+    {
+        "source": 2,
+        "target": 6,
+        "type": "Documentation",
+        "data": "Technical Documentation for self-checkout integration"
+    },
+    {
+        "source": 6,
+        "target": 1,
+        "type": "Process Artifacts",
+        "data": "User Stories and Backlogs for self-checkout features"
+    },
+    "artifacts",
+    "artifacts",
+    "artifacts"
+]

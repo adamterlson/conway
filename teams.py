@@ -27,7 +27,7 @@ code_executor_agent = autogen.ConversableAgent(
 )
 
 teams_bp = Blueprint('teams', __name__)
-llm_config={"model": "gpt-4o-mini"}
+llm_config={"model": "gpt-4o"}
 
 # MongoDB connection
 # client = MongoClient('localhost', 27017)
@@ -78,16 +78,8 @@ def cached_integration_completion():
     teams = load_json_files(directory)
     teamAgents = [create_agent_for_team(team) for team in teams]
 
-    user_proxy = autogen.ConversableAgent(
-        name="Admin",
-        system_message="Give the task, and send "
-        "instructions to writer to refine the blog post.",
-        code_execution_config=False,
-        llm_config=llm_config,
-        human_input_mode="ALWAYS",
-    )
-    user_proxy_auto = autogen.UserProxyAgent(
-        name="User_Proxy_Auto",
+    user_proxy = autogen.UserProxyAgent(
+        name="User",
         human_input_mode="NEVER",
         is_termination_msg=lambda x: x.get("content", "") and x.get("content", "").rstrip().endswith("TERMINATE"),
         code_execution_config={
@@ -96,6 +88,16 @@ def cached_integration_completion():
             "use_docker": False,
         },  # Please set use_docker=True if docker is available to run the generated code. Using docker is safer than running the generated code directly.
     )
+    # user_proxy_auto = autogen.UserProxyAgent(
+    #     name="User_Proxy_Auto",
+    #     human_input_mode="NEVER",
+    #     is_termination_msg=lambda x: x.get("content", "") and x.get("content", "").rstrip().endswith("TERMINATE"),
+    #     code_execution_config={
+    #         "last_n_messages": 1,
+    #         "work_dir": "tasks",
+    #         "use_docker": False,
+    #     },  # Please set use_docker=True if docker is available to run the generated code. Using docker is safer than running the generated code directly.
+    # )
 
     writer = autogen.ConversableAgent(
         name="report_agent",
@@ -107,7 +109,6 @@ def cached_integration_completion():
     task = "I am building self-checkout for Best Buy. How will you help me in this mission? My team_id is 6"
     for agent in teamAgents:
         chats.append({
-            "sender": user_proxy_auto,
             "recipient": agent,
             "message": task,
             "clear_history": True,
@@ -131,7 +132,7 @@ def cached_integration_completion():
     #     "silent": False,
     #     "summary_method": "last_msg",
     # })
-    chat_results = autogen.initiate_chats(chats)
+    chat_results = user_proxy.initiate_chats(chats)
     json_result = []
     for result in chat_results:
         artifacts = json.loads(result.summary)
@@ -141,41 +142,8 @@ def cached_integration_completion():
     # Create a temporary file in the 'temp' directory
     # Create a temporary file in the 'temp' directory
     with tempfile.NamedTemporaryFile(dir=temp_dir, delete=False, mode='w', suffix='.json') as temp_file:
-        # Write the JSON array to the temporary file
+        
         json.dump(json_result, temp_file, indent=4)
-
-    # reply = code_executor_agent.generate_reply(messages=[{"role": "user", "content": f"JSON file: {json_result}"}])
-    # print('\n\nREPLY============\n\n', reply)
-    print(os.listdir(temp_dir))
-    # print('File written to', tempfile.name)
-
-    # groupchat = autogen.GroupChat(
-    #     agents=[user_proxy, *teamAgents, writer],
-    #     messages=[],
-    #     max_round=10,
-    #     allowed_or_disallowed_speaker_transitions={
-    #         user_proxy: [*teamAgents, writer],
-    #         engineer: [user_proxy, executor],
-    #         writer: [user_proxy],
-    #     },
-    # )
-    # manager = autogen.GroupChatManager(
-    #     groupchat=groupchat, llm_config=llm_config
-    # )
-
-    # groupchat_result = user_proxy.initiate_chat(
-    #     manager,
-    #     message=task,
-    # )
-    # print(groupchat_result)
-
-    # // Create facilitating agent
-    # // Get a list of team names
-    # // Prompt with iteration through agents
-    # // Doc builder HOW TO DO SUMMARY WATCH VIDS
-    # // 
-    
-    # for api in teamAPIs:
     return json_result
 
 @teams_bp.route('/')

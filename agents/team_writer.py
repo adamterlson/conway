@@ -31,22 +31,5 @@ Perform the following steps
     - **Design Documentation**: List the technical and high level design documentation for the work of the team. Must be a list of URLs.
     - **Testing Documentation**: List the test proceedure and standards documentation. Must be a list of URLs.
 
-
-JSON {
-    team_name: team name
-    topology_type: topology type
-    north_star: north star
-    mission: mission statement
-    vision: vision statement
-    values_principals: values and principals
-    team_structure: team structure and roles
-    priorities: priorities
-    communication_channels: communication channels
-    stakeholders: stakeholders
-    performance_metrics: kpis
-    service_level_agreements: service level agreements
-    knowledge_bases: knowledge bases
-}
-
 """.replace('\n', '')
 # Mission: The marketing team's purpose is to help people find our company by educating and sharing useful information on a multitude of platforms.
