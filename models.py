@@ -6,7 +6,7 @@ class TeamStructure(BaseModel):
     responsibilities: str
 
 class CommunicationChannel(BaseModel):
-    channel: str
+    channel: str # Must be a URL
     purpose: str
 
 class Routines(BaseModel):
@@ -24,10 +24,10 @@ class ServiceLevelAgreement(BaseModel):
     sla: str
 
 class KnowledgeBase(BaseModel):
-    user_guides: List[str]
-    contribution_guides: List[str]
-    design_guides: List[str]
-    testing_guides: List[str]
+    user_guides: List[str] # Must be a URL
+    contribution_guides: List[str] # Must be a URL
+    design_guides: List[str] # Must be a URL
+    testing_guides: List[str] # Must be a URL
 
 class Stakeholders(BaseModel):
     core: List[str]

@@ -133,7 +133,7 @@ td {
     color: {% if topology_type == 'Stream-aligned' %}#2e7d32{% elif topology_type == 'Enablement' %}#d32f2f{% elif topology_type == 'Platform' %}#ff6f00{% else %}#000000{% endif %};
 ">
   <h1>Team API</h1>
-  <form action="/submit" method="post">
+  <form action="/" method="post">
     {% if not north_star %}
     <p>Begin by writing a little bit about the team.</p>
     <textarea id="team_description" name="team_description" required

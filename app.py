@@ -1,6 +1,6 @@
 import os
 import json
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect, url_for
 from pydantic import BaseModel
 from openai import OpenAI
 from flask_caching import Cache
@@ -135,7 +135,7 @@ class TeamAPI(BaseModel):
 
 @app.route('/')
 def index():
-    return render_template('start.html')
+    return render_template('create.html')
 
 @app.route('/viz')
 def viz():
@@ -144,13 +144,13 @@ def viz():
         
     return render_template('viz.html', data=data)
 
-@app.route('/submit', methods=['POST'])
+@app.route('/', methods=['POST'])
 def submit():
     team_description = request.form['team_description']
     print("TEAM_DESCRIPTION", team_description)
     result = cached_writer_completion(team_description)
     print(json.dumps(result, indent=2))
-    return render_template('start.html', **result)
+    return render_template('create.html', **result)
 
 if __name__ == '__main__':
     app.run(debug=True)
