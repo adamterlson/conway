@@ -133,14 +133,16 @@ td {
     color: {% if topology_type == 'Stream-aligned' %}#2e7d32{% elif topology_type == 'Enablement' %}#d32f2f{% elif topology_type == 'Platform' %}#ff6f00{% else %}#000000{% endif %};
 ">
   <h1>Team API</h1>
+  {% if not north_star %}
   <form action="/" method="post">
-    {% if not north_star %}
     <p>Begin by writing a little bit about the team.</p>
     <textarea id="team_description" name="team_description" required
       placeholder="What is your team's North Star? What is your mission statement? Who is your customer and how do you serve them?">
 The marketing team's purpose is to help people find our company by educating and sharing useful information on a multitude of platforms.</textarea><br /><br />
     <input type="submit" title="Get Started" />
-    {% else %}
+  </form>
+  {% else %}
+  <form action="/create" method="post">
     <p>
       It looks like this team is a <b>{{ topology_type }}</b> team.
       <a href="javascript:void(0);">Disagree?</a>
@@ -207,11 +209,11 @@ The marketing team's purpose is to help people find our company by educating and
       <fieldset>
         <legend>Service {{ loop.index }}</legend>
         <div class="form-group">
-          <label for="service-{{ loop.index }}">{{sla.service}}</label>
+          <label for="service-{{ loop.index }}">Service</label>
           <textarea id="service-{{ loop.index }}" name="service-{{ loop.index }}">{{ sla.service }}</textarea>
         </div>
         <div class="form-group">
-          <label for="sla-{{ loop.index }}">{{sla.sla}}</label>
+          <label for="sla-{{ loop.index }}">Service Level Agreeement</label>
           <textarea id="sla-{{ loop.index }}" name="sla-{{ loop.index }}">{{ sla.sla }}</textarea>
         </div>
       </fieldset>
@@ -222,7 +224,6 @@ The marketing team's purpose is to help people find our company by educating and
     </div>
     <div class="step">
       <h1>Communication Patterns</h1>
-      <p>The outputs, documents, and tools produced and maintained by the team.</p>
       <h2>Communication Channels</h2>
       {% for channel in communication_channels %}
       <label for="channel-{{ loop.index }}">{{ channel.channel }}</label>
@@ -255,8 +256,8 @@ The marketing team's purpose is to help people find our company by educating and
         Next
       </button>
     </div>
-    {% endif %}
   </form>
+  {% endif %}
 
   <script>
     let currentStep = 0;

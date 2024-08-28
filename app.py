@@ -20,7 +20,7 @@ app.client = client
 # Configure MongoDB
 mongo_client = MongoClient('localhost', 27017)
 db = mongo_client.my_database
-collection = db.my_collection
+collection = db.team_apis
 
 # Configure Flask-Caching
 app.config['CACHE_TYPE'] = 'SimpleCache'  # Simple in-memory cache for demonstration
@@ -137,20 +137,29 @@ class TeamAPI(BaseModel):
 def index():
     return render_template('create.html')
 
+@app.route('/', methods=['POST'])
+def sample():
+    team_description = request.form['team_description']
+    print("TEAM_DESCRIPTION", team_description)
+    result = cached_writer_completion(team_description)
+    print(json.dumps(result, indent=2))
+    return render_template('create.html', **result)
+
+@app.route('/create', methods=['POST'])
+def create():
+    collection.insert_one(request.form.to_dict())
+    return redirect(url_for('list'))
+
+@app.route('/list')
+def list():
+    return render_template('list.html')
+
 @app.route('/viz')
 def viz():
     with open('sample_data/organization2.json') as f:
         data = json.load(f)
         
     return render_template('viz.html', data=data)
-
-@app.route('/', methods=['POST'])
-def submit():
-    team_description = request.form['team_description']
-    print("TEAM_DESCRIPTION", team_description)
-    result = cached_writer_completion(team_description)
-    print(json.dumps(result, indent=2))
-    return render_template('create.html', **result)
 
 if __name__ == '__main__':
     app.run(debug=True)
