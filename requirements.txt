@@ -3,3 +3,4 @@ openai
 flask_caching
 pymongo
 pyautogen
+boto3

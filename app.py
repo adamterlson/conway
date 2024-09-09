@@ -1,5 +1,8 @@
+import uuid
 import os
 import json
+import boto3
+from botocore.config import Config
 from flask import Flask, request, jsonify, render_template, redirect, url_for
 from pydantic import BaseModel
 from openai import OpenAI
@@ -9,6 +12,7 @@ from pymongo import MongoClient
 from teams import teams_bp
 from grade import grade_bp
 from models import TeamAPI
+from unittest import result
 
 client = OpenAI()
 
@@ -147,7 +151,17 @@ def sample():
 
 @app.route('/create', methods=['POST'])
 def create():
-    collection.insert_one(request.form.to_dict())
+    my_config = Config(
+        region_name = 'us-east-1'
+    )
+    dynamodb = boto3.resource('dynamodb', config=my_config)
+    table = dynamodb.Table('team_apis')
+    result = request.form.to_dict()
+    table.put_item(Item={
+        'id': str(uuid.uuid4()),
+        "category": "test",
+        "payload": result
+    })
     return redirect(url_for('list'))
 
 @app.route('/list')
@@ -163,4 +177,3 @@ def viz():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
