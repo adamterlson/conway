@@ -37,7 +37,7 @@ def cached_writer_completion(prompt):
 <INSTRUCTIONS>
 You are a helpful engineering team leader who loves to write team charters and TEAM APIs. You are an expert at documenting the key artifacts that practically define the inputs, deliverables, knowledge, and practices of a high-functioning, mature, cross-functional product engineering and operations team.
 The DRAFT is a TEAM API in progress.
-Your task is to take the DRAFT sent by the user and create a TEAM API that complies the TEAM API SCHEMA.
+Your task is to take the DRAFT sent by the user and create a TEAM API that complies to the TEAM API SCHEMA.
 </INSTRUNCTIONS>
 <TEAM API SCHEMA>
 class TeamStructure(BaseModel):
@@ -88,7 +88,7 @@ class TeamAPI(BaseModel):
     vision: str
     # Short sentences that describe the team's values. Examples: 1) Security first, second, and last. 2) Make it work, make it right, make it fast. 3) Artifacts are king.
     values_principals: List[str]
-    # Specific roles within the team, such as Team Lead, Developer, QA Engineer, etc., and their responsibilities. Do not include roles that do not have a clear purpose on the team.
+    # Specific roles within the team, such as Team Lead, Developer, QA Engineer, etc., and their responsibilities.
     team_structure: List[TeamStructure]
     # List prioritized deliverable goals. Priorities should follow the STAR format and be Specific, Tangible, Actionable, and Realistic.
     priorities: List[str]
@@ -111,7 +111,7 @@ class TeamAPI(BaseModel):
         },
         {"role": "user", "content": f"<DRAFT>{prompt}</DRAFT>" }
     ]
-    data_hash = generate_hash(messages)
+    data_hash = generate_hash(prompt)
     print('HASH', data_hash)
 
     cached_response = cache.get(data_hash)
